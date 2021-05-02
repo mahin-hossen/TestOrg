@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Create Your Account</title>
+    <link rel="icon" href="./pencil.png" />
+  </head>
+  <body>
+    <main>
+      <header class="login_nav">
+        <li><a href="/login.html">Home</a></li>
+        <li><a href="/our_services/our_services.html">Our Services</a></li>
+        <li><a href="/Why_Us/why_us.html">Why us</a></li>
+        <li><a href="/Contact/contact.html">Contact Us</a></li>
+      </header>
+      <section>
+        <form action="" method="get">
+          <table class="table create_acc_input">
+            <tr>
+              <td><label for="first_name">Your First Name</label></td>
+              <td><input type="text" name="first_name" id="first_name" /></td>
+            </tr>
+            <tr>
+              <td><label for="last_name">Your Last Name</label></td>
+              <td><input type="text" name="last_name" id="last_name" /></td>
+            </tr>
+            <tr>
+              <td><label for="username">Your Username</label></td>
+              <td><input type="text" name="username" id="username" /></td>
+            </tr>
+            <tr>
+              <td><label for="password1">Choose a Password</label></td>
+              <td><input type="password" name="password1" id="password1" /></td>
+            </tr>
+            <tr>
+              <td><label for="password2">Confirm Your Password</label></td>
+              <td><input type="password" name="password2" id="password2" /></td>
+            </tr>
+            <tr>
+              <td><label for="email">Enter your email</label></td>
+              <td><input type="email" name="email" id="email" /></td>
+            </tr>
+          </table>
+          <div class="person create_acc_input">
+            <div>
+              <input type="radio" id="teacher" name="person" value="teacher" />
+              <label for="teacher">I'm Teacher</label>
+            </div>
+            <div>
+              <input type="radio" id="student" name="person" value="student" />
+              <label for="student">I'm Student</label>
+            </div>
+          </div>
+          <div class="create_acc_input">
+            <input type="button" value="CONFIRM" id="button" />
+          </div>
+
+          <!-- 
+        
+            <div>
+                <input type="button" value="CONFIRM" id="button">   
+            </div> -->
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>TestOrg</p>
+      <p>&copy 2021 copyright all right reserved</p>
+    </footer>
+
+    <!-- ---------------js------------ -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>

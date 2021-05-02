@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+main {
+  background-image: url(/pexels-vlada-karpovich-4050287.jpg);
+  background-position: top;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: lightcoral;
+}
+/******************* header ******************/
+header {
+  /* background-color: cyan; */
+  /* border: 2px solid blue; */
+  font-size: 5rem;
+  color: rgb(62, 95, 95);
+  padding-top: 3rem;
+}
+
+li {
+  list-style: none;
+  /* float: left;   */
+  display: inline-block;
+  margin-inline: 5rem;
+}
+
+/******************* section ******************/
+
+section {
+  display: inline-block;
+  text-align: center;
+  padding-top: 15rem;
+  padding-bottom: 8.5rem;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-top: 1rem;
+  color: rgb(70, 153, 180);
+}
+#button {
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  margin-top: 1rem;
+  background-color: #889299;
+  color: #10181d;
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 100;
+  font-family: monospace;
+}
+#button:hover {
+  cursor: pointer;
+  box-shadow: 0 10px 36px rgba(63, 27, 131, 0.15);
+}
+
+div {
+  color: rgb(52, 121, 98);
+  font-size: 3rem;
+  width: 100%;
+}
+
+.login {
+  margin-top: 3rem;
+}
+input {
+  text-align: center;
+}
+#password {
+  margin-left: 0.5rem;
+}
+aside {
+  /* margin-top: 1rem;    */
+  text-align: center;
+}
+.p1 {
+  font-size: 1.5rem;
+  display: inline-block;
+  margin-inline: 1rem;
+  color: rgb(109, 96, 96);
+}
+#create_acc {
+  color: rgb(77, 102, 53);
+}
+.person
+{
+  font-size: 1.5rem;
+  color: rgb(48, 84, 150);
+}
+
+/************* footer **************/
+
+footer {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #fff;
+  background-color: #0e2431;
+  bottom: 5;
+  position: absolute;
+  width: 100%;
+}
+p {
+  margin-block: 2rem;
+}

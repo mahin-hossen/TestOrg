@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+main {
+  display: block;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: lightcoral;
+}
+
+/****************Header******************/
+
+header {
+  /* background-color: cyan; */
+  /* border: 2px solid blue; */
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(12, 236, 116, 0.9925012241224614) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  font-size: 5rem;
+  color: rgb(62, 95, 95);
+  padding-top: 3rem;
+  height: 20vh;
+  padding-bottom: 2rem;
+}
+
+li {
+  list-style: none;
+  /* float: left;   */
+  display: inline-block;
+  margin-inline: 5rem;
+}
+
+/****************Section*****************/
+#button {
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  margin-top: 1rem;
+  background-color: #889299;
+  color: #10181d;
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 100;
+  font-family: monospace;
+}
+#button:hover {
+  cursor: pointer;
+  box-shadow: 0 10px 36px rgba(63, 27, 131, 0.15);
+  color: rgb(44, 180, 56);
+  background-color: rgb(52, 121, 98);
+}
+
+.split {
+  width: 50%;
+  position: relative;
+  display: inline-block;
+  /* float:left; */
+}
+
+.left_side {
+  float: left;
+  left: 0;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.right_side {
+  height: auto;
+  position: absolute;
+
+  border: none;
+  background: rgb(63, 94, 251);
+  background: linear-gradient(
+    200deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(70, 252, 234, 0.9868989832261029) 100%
+  );
+  padding-top: 5rem;
+
+  right: 0;
+  padding-bottom: 10rem;
+}
+
+input {
+  /* text-align: center;
+  display: block; */
+  border-radius: 0.5rem;
+  border: none;
+  width: 35vh;
+}
+textarea {
+  width: 35vh;
+  border: none;
+  border-radius: 5%;
+}
+::placeholder {
+  font-family: "Lucida Console", "Courier New", monospace;
+  padding-left: 1rem;
+}
+div {
+  border: none;
+  margin-block: 2rem;
+  align-items: center;
+  text-align: center;
+}
+
+/**************footer***************/
+footer {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #fff;
+  background-color: #0e2431;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  height: 15vh;
+}
+p {
+  margin-block: 2rem;
+}

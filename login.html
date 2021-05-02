@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/login-icon-3039.gif" />
+    <title>Login</title>
+  </head>
+  <body>
+    <main>
+      <header class="login_nav">
+        <li><a href="/login.html">Home</a></li>
+        <li><a href="/our_services/our_services.html">Our Services</a></li>
+        <li><a href="/Why_Us/why_us.html">Why us</a></li>
+        <li><a href="/Contact/contact.html">Contact Us</a></li>
+      </header>
+
+      <section>
+        <form action="" method="get">
+          <div class="login">
+            <label for="username" class="login_input">Username </label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              class="login_input"
+            />
+          </div>
+          <div>
+            <label for="password" class="login_input">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="login_input"
+            />
+          </div>
+          <div class="person login_input">
+            <input type="radio" id="teacher" name="person" value="teacher">
+            <label for="teacher">Teacher</label>
+            <input type="radio" id="student" name="person" value="student">
+            <label for="student">Student</label>
+          </div>
+          
+          <!-- <h1><a href="#">Login</a></h1> -->
+          <input type="button" value="Login" id="button" class="login_input" />
+        </form>
+        <aside>
+          <p class="p1" class="login_input">Already have an Account?</p>
+          <p class="p1" id="create_acc" class=".login_input">
+            <a href="./create_acc/create_acc.html">Create an Account</a>
+          </p>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <p>TestOrg</p>
+      <p>&copy 2021 copyright all right reserved</p>
+    </footer>
+
+    <!-- ---------------js------------ -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>

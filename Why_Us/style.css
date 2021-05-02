@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: lightcoral;
+}
+/******************* header ******************/
+header {
+  font-size: 5rem;
+  color: rgb(62, 95, 95);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #f2e7ed;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  margin-inline: 5rem;
+}
+
+/******************* body ******************/
+.top {
+  width: 100%;
+  background-image: url(/Why_Us/top_background.jpg);
+  padding-top: 13.8rem;
+}
+aside h1 {
+  font-size: 5rem;
+}
+aside {
+  width: 50%;
+  font-family: sans-serif;
+  font-size: 2rem;
+  color: white;
+  background-color: rgb(118, 49, 207);
+  bottom: 0;
+
+  padding: 8rem 4rem;
+}
+.bottom h1 {
+  font-size: 6rem;
+  font-family: serif;
+  color: tomato;
+  font-weight: 600;
+}
+
+.bottom p {
+  color: rgb(66, 94, 170);
+  font-weight: 600;
+  font-size: 3rem;
+  margin-block: 3rem;
+}
+.bottom var {
+  color: rgb(24, 21, 21);
+}
+.bottom div
+{
+  margin-left: 10rem;
+}
+.bottom {
+  background-image: url(/Why_Us/bottom_background.jpg);
+  /* width: 100%; */
+  padding: 30rem 0rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-position:bottom;
+}
+
