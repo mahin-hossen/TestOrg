@@ -1,21 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="/login-icon-3039.gif" />
     <title>TestOrg</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <header class="login_nav">
-            <li><a href="/login.html">Home</a></li>
-            <li><a href="/our_services/our_services.html">Our Services</a></li>
-            <li><a href="/Why_Us/why_us.html">Why us</a></li>
-            <li><a href="/Contact/contact.html">Contact Us</a></li>
-          </header>
+      <header class="login_nav">
+        <li id="home"><a href="">Testorg </a></li>
+        <li><a href="">Profile </a></li>
+        <li><a href="">Find Examroom</a></li>
+        <li><a href="">My Examroom</a></li>
+        <li><a href="">SignOut</a></li>
+        <!-- <li id="button"><input type="button" value="Signout"></li> -->
+      </header>
+      <article>
+        <!-- <div id="welcome">Welcome Back to TestOrg</div>  -->
+        <!-- <div id="first"><a>looking for an examroom?</a> </div>
+              <a>
+                  link
+              </a>
+              <div id="sec"><a>Already joined a room?</a></div> -->
+        <div id="welcome" class="will_go_down">Welcome Back to TestOrg</div>
+        <table>
+          <tr id="first_row">
+            <td>
+              <div><p>Looking for an examroom?</p></div>
+              <div class="will_go_down">
+                <p>Go to <a src="#">Find Examroom</a></p>
+              </div>
+            </td>
+            <td>
+              <div><p>Already joined a room?</p></div>
+              <div class="will_go_down">
+                <p>Go to <a src="#">My Examroom</a></p>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="lower">
+          <p>Still need help?</p>
+          <p class="will_go_down"><a href="/Contact/contact.html">Contact Us</a></p>
+        </div>
+      </article>
     </main>
-</body>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/script.js"></script>
+  </body>
 </html>

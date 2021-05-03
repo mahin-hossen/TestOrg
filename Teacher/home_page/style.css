@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+main {
+  /* background-image: url(/pexels-vlada-karpovich-4050287.jpg); */
+  background-image: url(/Student/home_page/pexels-johannes-plenio-2080960.jpg);
+  background-size:cover;
+  
+  
+
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: rgb(60, 39, 155);
+  cursor: pointer;
+  box-shadow: rgb(19, 9, 29);
+}
+/******************* header ******************/
+header {
+  /* background-color: cyan; */
+  /* border: 2px solid blue; */
+
+  color: rgb(62, 95, 95);
+  padding-top: 3rem;
+  
+}
+
+li {
+  list-style: none;
+  /* float: left;   */
+  font-size: 2.5rem;
+  display: inline-block;
+  margin-inline: 5rem;
+}
+#home {
+  font-size: 5rem;
+}
+
+
+
+/*************************article**********************/
+
+#first_row
+{
+  color:#F2F3F4  ;
+}
+#welcome
+{
+  color: #2ECC71  ;
+  margin-top: 12rem;
+  text-align: center;
+}
+
+div {
+  font-size: 3.5rem;
+  text-align: center;
+}
+.lower 
+{
+  margin-top: 0rem;
+  padding-bottom: 1rem;
+}
+.lower p {
+  font-size: 3rem;
+  color: aliceblue;
+  margin-block: 2rem;     
+}
+.lower a
+{
+  color: #0f0f09;
+}
+.lower a:hover
+{
+  color: rgb(37, 107, 37);
+  box-shadow: chartreuse;  
+}
+
+tr p {
+  display: inline;
+  font-size: 3rem;
+}
+#contact {
+  width: 50%;
+}
+table {
+  
+  text-align: center;
+  width: 100%;
+  font-size: 3.5rem;
+  border-collapse: collapse;    
+}
+table a
+{
+  color: #F5CBA7;
+}
+table a:hover
+{
+  color: lightgreen;
+}
+th {
+  
+  width: 100%;
+}
+td {
+  
+  width: 50%;
+  padding: 4rem; 
+}
+td div
+{
+  margin-block: 3rem;
+}
+

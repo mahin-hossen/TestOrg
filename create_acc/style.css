@@ -1,114 +1,98 @@
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
 
-a
-{
-    text-decoration: none;
-    color: inherit;
+a {
+  text-decoration: none;
+  color: inherit;
 }
-a:hover
-{
-    color: lightcoral;
+a:hover {
+  color: lightcoral;
 }
-main{
-    background-image: url(./pexels-johannes-plenio-1103970.jpg);
-    background-position: center;
+main {
+  background-image: url(./pexels-johannes-plenio-1103970.jpg);
+  background-position: center;
 }
 
 /******************* header ******************/
-header
-{
+header {
   /* background-color: cyan; */
   /* border: 2px solid blue; */
   font-size: 5rem;
-  color: rgb(62, 95, 95);    
+  color: rgb(62, 95, 95);
   padding-top: 3rem;
 }
 
-
-li
-{
-  list-style: none;    
+li {
+  list-style: none;
   /* float: left;   */
   display: inline-block;
   margin-inline: 5rem;
 }
 
 /******************* section ******************/
- section
-{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2rem;
-    padding: 5rem 0rem 3rem 0rem;
-    
-
+section {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 2rem;
+  padding: 5rem 0rem 3rem 0rem;
 }
-table
-{
-    /* text-align: left;
+table {
+  /* text-align: left;
     text-align:center; 
     margin: 0 auto; */
-    /* border-spacing: 10rem 3rem; */
-    font-size: 2.4rem;    
-    /* padding: 1em 1em; */
-    /* height: max-content 100rem;
+  /* border-spacing: 10rem 3rem; */
+  font-size: 2.4rem;
+  /* padding: 1em 1em; */
+  /* height: max-content 100rem;
     width: auto; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-td{
-    padding: 1rem 8rem;
+td {
+  padding: 1rem 8rem;
 }
-div
-{
-    text-align: center;
+div {
+  text-align: center;
 }
-input
-{
-    text-align: center;
-    border: 2px solid green;
-    padding: 12px ;
-        /* padding:  auto;
+input {
+  text-align: center;
+  border: 2px solid green;
+  padding: 12px;
+  /* padding:  auto;
     max-block-size: inherit;
     max-width: inherit; */
-    
-    border-radius: 0.5rem;
-    /* border-style:inherit; */
+
+  border-radius: 0.5rem;
+  /* border-style:inherit; */
 }
-#button{
-    border: none; 
-    outline: none;
-    font-size: 2rem;
-    margin-top: 1rem;
-    background-color: #081b0a;
-    color: #ffffff;
-    padding: .75rem 1rem;    
-    border-radius: .5rem;
-    font-weight:100;
-    font-family:monospace;
+#button {
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  margin-top: 1rem;
+  background-color: #081b0a;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 100;
+  font-family: monospace;
 }
-#button:hover
-{
-    cursor: pointer;
-    color: #2db661;
-    box-shadow: 0 10px 36px rgba(63, 27, 131, 0.15);
+#button:hover {
+  cursor: pointer;
+  color: #2db661;
+  box-shadow: 0 10px 36px rgba(63, 27, 131, 0.15);
 }
-.person div{
-    display: inline;
-    margin-inline: 2rem;
-    color:thistle;
-    
+.person div {
+  display: inline;
+  margin-inline: 2rem;
+  color: thistle;
 }
 /*
 label
@@ -127,19 +111,17 @@ input
 
 /************* footer **************/
 
-footer{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.5rem;
-    text-align: center;    
-    color: #fff;    
-    background-color: #0E2431;    
-    /* bottom: 0; */
-    position: absolute;
-    width: 100%;   
-    
+footer {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #fff;
+  background-color: #0e2431;
+  /* bottom: 0; */
+  position: absolute;
+  width: 100%;
 }
-p
-{
-    margin-block: 2rem;
-    /* padding-right: 1rem; */
+p {
+  margin-block: 2rem;
+  /* padding-right: 1rem; */
 }
