@@ -19,16 +19,22 @@
 
       <section>
         <form action="" method="get">
+          <!-- <table>
+            <tr>
+              <td><label for="email" class="login_input">Email </label></td>             
+              <td></td>
+            </tr>
+          </table> -->
           <div class="login">
-            <label for="username" class="login_input">Username </label>
+            <label for="email" class="login_input">Email </label>
             <input
               type="text"
-              name="username"
-              id="username"
+              name="email"
+              id="email"
               class="login_input"
             />
           </div>
-          <div>
+          <div id="pass">
             <label for="password" class="login_input">Password</label>
             <input
               type="password"
@@ -38,17 +44,17 @@
             />
           </div>
           <div class="person login_input">
-            <input type="radio" id="teacher" name="person" value="teacher">
+            <input type="radio" id="teacher" name="person" value="teacher" />
             <label for="teacher">Teacher</label>
-            <input type="radio" id="student" name="person" value="student">
+            <input type="radio" id="student" name="person" value="student" />
             <label for="student">Student</label>
           </div>
-          
+
           <!-- <h1><a href="#">Login</a></h1> -->
           <input type="button" value="Login" id="button" class="login_input" />
         </form>
         <aside>
-          <p class="p1" class="login_input">Already have an Account?</p>
+          <p class="p1" class="login_input">Don't have an Account?</p>
           <p class="p1" id="create_acc" class=".login_input">
             <a href="./create_acc/create_acc.html">Create an Account</a>
           </p>
@@ -62,6 +68,14 @@
     </footer>
 
     <!-- ---------------js------------ -->
+
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>    
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>    
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>    
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+
+
+    <script src="/js/firebase_main.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="/script.js"></script>
   </body>

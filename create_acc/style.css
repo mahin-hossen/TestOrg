@@ -89,25 +89,37 @@ input {
   color: #2db661;
   box-shadow: 0 10px 36px rgba(63, 27, 131, 0.15);
 }
+.radio_btn:hover
+{
+  cursor: pointer;
+}
 .person div {
   display: inline;
   margin-inline: 2rem;
   color: thistle;
+  
+  
 }
-/*
-label
+.password_mismatch
 {
-    align-items: center;
-    align-content: center;
-    display: block;
+  display:none;
 }
-input
+.password_mismatch
 {
-    
-    align-items : center;
-    align-content: center;
-    display: block;
-} */
+  color: rgb(33, 19, 156);
+}
+
+.password_mismatch a
+{
+  color:crimson;
+}
+.create_acc_input
+{
+  /* border: 1px solid black; */
+  padding-bottom: 2rem;
+}
+
+
 
 /************* footer **************/
 
@@ -121,7 +133,7 @@ footer {
   position: absolute;
   width: 100%;
 }
-p {
+footer p {
   margin-block: 2rem;
   /* padding-right: 1rem; */
 }

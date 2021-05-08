@@ -17,52 +17,81 @@
         <li><a href="/Contact/contact.html">Contact Us</a></li>
       </header>
       <section>
-        <form action="" method="get">
-          <table class="table create_acc_input">
-            <tr>
-              <td><label for="first_name">Your First Name</label></td>
-              <td><input type="text" name="first_name" id="first_name" /></td>
-            </tr>
-            <tr>
-              <td><label for="last_name">Your Last Name</label></td>
-              <td><input type="text" name="last_name" id="last_name" /></td>
-            </tr>
+        <form id="signup-form" action="" method="get">
+          <table class="table">
             <tr>
               <td><label for="username">Your Username</label></td>
-              <td><input type="text" name="username" id="username" /></td>
+              <td>
+                <input type="text" name="username" id="username" required />
+              </td>
             </tr>
             <tr>
               <td><label for="password1">Choose a Password</label></td>
-              <td><input type="password" name="password1" id="password1" /></td>
+              <td>
+                <input
+                  type="password"
+                  name="password1"
+                  id="password1"
+                  required
+                />
+              </td>
             </tr>
             <tr>
               <td><label for="password2">Confirm Your Password</label></td>
-              <td><input type="password" name="password2" id="password2" /></td>
+              <td>
+                <input
+                  type="password"
+                  name="password2"
+                  id="password2"
+                  required
+                />
+              </td>
             </tr>
             <tr>
               <td><label for="email">Enter your email</label></td>
-              <td><input type="email" name="email" id="email" /></td>
+              <td><input type="email" name="email" id="email" required /></td>
             </tr>
           </table>
-          <div class="person create_acc_input">
-            <div>
-              <input type="radio" id="teacher" name="person" value="teacher" />
-              <label for="teacher">I'm Teacher</label>
+          <div >
+            <div class="person create_acc_input">
+              <div>
+                <input
+                  type="radio"
+                  id="teacher"
+                  class="radio_btn"
+                  name="person"
+                  value="teacher"
+                  required
+                />
+                <label for="teacher" class="radio_btn">I'm Teacher</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="student"
+                  class="radio_btn"
+                  name="person"
+                  value="student"
+                  required
+                />
+                <label for="student" class="radio_btn">I'm Student</label>
+              </div>
             </div>
-            <div>
-              <input type="radio" id="student" name="person" value="student" />
-              <label for="student">I'm Student</label>
-            </div>
-          </div>
-          <div class="create_acc_input">
-            <input type="button" value="CONFIRM" id="button" />
-          </div>
 
-          <!-- 
-        
             <div>
-                <input type="button" value="CONFIRM" id="button">   
-            </div> -->
+              <p class="password_mismatch">
+                Passwords doesn't match. Please
+                <a id="password_match_error" href="/create_acc/create_acc.html"
+                  >try again</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="">
+            <!-- <input type="button" value="CONFIRM" id="button" /> -->
+            
+            <button id="button" type="submit">CONFIRM</button>
+          </div>
         </form>
       </section>
     </main>
@@ -72,6 +101,14 @@
     </footer>
 
     <!-- ---------------js------------ -->
+
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+
+    <script src="/js/firebase_main.js"></script>
+    <script src="/js/signup.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="/script.js"></script>
   </body>

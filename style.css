@@ -74,6 +74,14 @@ div {
 .login {
   margin-top: 3rem;
 }
+.login label
+{  
+  margin-right: 4.5rem;
+}
+#pass
+{
+  padding-bottom: 2rem;
+}
 input {
   text-align: center;
 }
