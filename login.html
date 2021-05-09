@@ -18,13 +18,7 @@
       </header>
 
       <section>
-        <form action="" method="get">
-          <!-- <table>
-            <tr>
-              <td><label for="email" class="login_input">Email </label></td>             
-              <td></td>
-            </tr>
-          </table> -->
+        <form action="" method="get" id="login-form">
           <div class="login">
             <label for="email" class="login_input">Email </label>
             <input
@@ -32,6 +26,7 @@
               name="email"
               id="email"
               class="login_input"
+              required
             />
           </div>
           <div id="pass">
@@ -41,23 +36,43 @@
               name="password"
               id="password"
               class="login_input"
+              required
             />
           </div>
           <div class="person login_input">
-            <input type="radio" id="teacher" name="person" value="teacher" />
+            <input
+              type="radio"
+              id="teacher"
+              name="person"
+              value="teacher"
+              required
+            />
             <label for="teacher">Teacher</label>
-            <input type="radio" id="student" name="person" value="student" />
+            <input
+              type="radio"
+              id="student"
+              name="person"
+              value="student"
+              required
+            />
             <label for="student">Student</label>
           </div>
-
-          <!-- <h1><a href="#">Login</a></h1> -->
-          <input type="button" value="Login" id="button" class="login_input" />
+          <!-- <input type="button" value="Login" id="button" class="login_input" /> -->
+          <button id="button">Login</button>          
         </form>
         <aside>
           <p class="p1" class="login_input">Don't have an Account?</p>
           <p class="p1" id="create_acc" class=".login_input">
             <a href="./create_acc/create_acc.html">Create an Account</a>
           </p>
+          <div>
+            <p class="login_error">
+              Passwords doesn't match. Please
+              <a id="login_error" href="/login.html"
+                >try again</a
+              >
+            </p>
+          </div>
         </aside>
       </section>
     </main>
@@ -69,13 +84,13 @@
 
     <!-- ---------------js------------ -->
 
-    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>    
-    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>    
-    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>    
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
 
-
     <script src="/js/firebase_main.js"></script>
+    <script src="/js/login.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="/script.js"></script>
   </body>

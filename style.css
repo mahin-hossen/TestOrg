@@ -97,6 +97,7 @@ aside {
   display: inline-block;
   margin-inline: 1rem;
   color: rgb(109, 96, 96);
+  padding-top: 1rem;
 }
 #create_acc {
   color: rgb(77, 102, 53);
@@ -105,6 +106,19 @@ aside {
 {
   font-size: 1.5rem;
   color: rgb(48, 84, 150);
+}
+
+.login_error
+{
+  display: none;  
+  padding-top: 2rem ;
+  font-size: 2rem;
+  color:firebrick;
+}
+
+.login_error a
+{
+  color:firebrick;
 }
 
 /************* footer **************/
@@ -119,6 +133,6 @@ footer {
   position: absolute;
   width: 100%;
 }
-p {
+footer p {
   margin-block: 2rem;
 }
