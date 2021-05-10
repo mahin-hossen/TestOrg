@@ -17,7 +17,7 @@ signupForm.addEventListener("submit", (e) => {
     auth.createUserWithEmailAndPassword(email, password1).then((cred) => {  
       if(person[1].checked)      
       {        
-        return db.collection("students").doc(cred.user.uid).set(
+        return db.collection("usersinfo").doc(cred.user.uid).set(
         {
           username: username,
           email: email,
@@ -26,7 +26,7 @@ signupForm.addEventListener("submit", (e) => {
       }
       else if(person[0].checked)
       {
-        return db.collection("teachers").doc(cred.user.uid).set(
+        return db.collection("usersinfo").doc(cred.user.uid).set(
           {
             username: username,
             email: email,
