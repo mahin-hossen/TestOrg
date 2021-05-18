@@ -22,6 +22,7 @@ signupForm.addEventListener("submit", (e) => {
           username: username,
           email: email,
           user_type: "student",
+          total_examroom: 0,
         });
       }
       else if(person[0].checked)
@@ -31,6 +32,7 @@ signupForm.addEventListener("submit", (e) => {
             username: username,
             email: email,
             user_type: "teacher",
+            total_examroom: 0,
           });
       }
         

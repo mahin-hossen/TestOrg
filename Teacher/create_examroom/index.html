@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Teacher/create_examroom/style.css" />
+    <title>Create Examroom</title>
+  </head>
+  <body>
+    <main class="grey lighten-3">
+      <header class="login_nav">
+        <li id="home"><a href="">Testorg </a></li>
+        <li><a href="">Profile </a></li>
+        <li>
+          <a href="/Teacher/create_examroom/index.html">Create Examroom</a>
+        </li>
+        <li><a href="">My Examroom</a></li>
+        <li><a href="#" id="signout">SignOut</a></li>
+      </header>
+      <section>
+        <div id="first-part">
+          <form action="" id="first-form">
+            <table id="first-table">
+              <tr>
+                <td>
+                  <label for="course-name" id="label-course-name"
+                    >Course Name</label
+                  >
+                  <input id="course-name" type="text" required/>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="course-teacher">Courser Teacher</label>
+                  <input type="text" id="course-teacher" required/>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="exam-date" id="label-exam-date">Exam Date</label>
+                  <input type="date" name="" id="exam-date" required/>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="start-time">Starting time</label>
+                  <input type="time" name="" id="start-time" required/>
+                  <label for="ending-time">Ending time</label>
+                  <input type="time" name="" id="ending-time" required/>
+                </td>
+              </tr>
+            </table>
+            <button class="button" id="next-button">Next</button>
+          </form>
+        </div>
+
+        <div id="sec_part">
+          <ul id="added-question">
+          </ul>
+          <form action="" id="second-form">
+            <table id="second-table">
+              <tr>
+                <td>
+                  <textarea name="" id="question" cols="70" rows="3" placeholder="Enter your question statement..."></textarea required>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" name="" id="Option_1" placeholder="Option 1" required/>
+                  <input type="text" name="Option_2" id="" placeholder="Option 2" required/>
+                </td>                
+              </tr>              
+              <tr>
+                <td>
+                  <input type="text" name="" id="Option_3" placeholder="Option 3" required/>
+                  <input type="text" name="" id="Option_4" placeholder="Option 4" required/>
+                </td>
+              </tr>  
+              <tr>
+                <td>
+                  <input type="text" name="" id="ans" placeholder="Correct Answer" required/>
+                  <input type="text" name="" id="hide" placeholder="Correct Answer"/>
+
+                </td>
+                
+              </tr>                        
+            </table>
+            <button class="button" id="add-button">Add Question</button>  
+           
+          </form>
+          
+        </div>
+      </section>
+    </main>
+
+
+
+     <!-- ---------------js------------ -->
+
+     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+ 
+     <script src="/js/firebase_main.js"></script>
+     <script src="/js/login.js"></script>
+     <script src="/js/signup.js"></script>
+     <script src="/js/signout.js"></script>
+     <script src="/js/create_examroom.js"></script>
+     
+     
+
+     <script src="https://unpkg.com/scrollreveal"></script>
+     <script src="/script.js"></script>
+  </body>
+</html>

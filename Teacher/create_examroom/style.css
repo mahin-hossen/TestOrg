@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+main {
+  /* background-image: url(/pexels-vlada-karpovich-4050287.jpg); */
+  /* background-image: ;
+  background-size: cover; */
+  /* background-color: lightgray; */
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: rgb(60, 39, 155);
+  cursor: pointer;
+  box-shadow: rgb(19, 9, 29);
+}
+
+/*********************** header **********************/
+header {
+  /* background-color: cyan; */
+  /* border: 2px solid blue; */
+
+  color: rgb(62, 95, 95);
+  padding-block: 3rem;
+  /* border: 2px solid black; */
+}
+
+header li {
+  list-style: none;
+  /* float: left;   */
+  font-size: 2.5rem;
+  display: inline-block;
+  margin-inline: 5rem;  
+}
+#home {
+  font-size: 5rem;
+}
+/**************************section*************************/
+/***************************1st form**********************/
+#first-part
+{
+  /* display: none; */
+}
+#first-table
+{
+  
+  /* border: 1px solid black; */  
+  width: 100%;
+  font-size: 2rem;
+  padding-left: 10rem;
+}
+#first-table td
+{
+  padding-inline: 1rem;
+  padding-block: 4rem;
+  /* border: 1px solid black; */
+}
+#label-course-name
+{
+  padding-right: 7rem;
+}
+#label-exam-date
+{
+  padding-right: 6rem;
+}
+label
+{
+  padding:0rem 0rem 0rem 5rem;
+  padding-inline-end: 5rem;
+  
+}
+input {
+  display: inline-block;
+}
+/*********************************2nd form*******************************/
+#second-form
+{
+  display: none;
+  padding-bottom: 10rem;
+  /* border: 2px solid black; */
+}
+#second-table
+{
+  /* border: 2px solid black; */
+  width: 100%;
+  /* padding:5rem 0rem 10rem 30rem;   */  
+  text-align: center;
+  
+  
+}
+#second-table td
+{
+  padding-block: 2rem;  
+  /* border: 2px solid blue; */
+  /* padding-left: 40rem; */
+}
+
+#second-table td input
+{
+  margin-inline: 5rem;
+  /* border: 2px solid red; */
+}
+
+#hide
+{
+  visibility: hidden;
+}
+
+
+
+/*****************li*************************/
+ul
+{
+  list-style-type: none;
+  padding: 0;
+}
+ul li
+{
+  padding:2rem;
+  background: #f6f6f6;
+  font-size: 1.5rem;
+  color: #555;
+  position: relative;
+  border-bottom: 1px solid #e6e6e6;
+  /* height: 46px; */
+}
+/* 
+ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li{
+  padding: 20px;
+  background: #f6f6f6;
+  font-size: 20px;
+  color: #555;
+  position: relative;
+  border-bottom: 1px solid #e6e6e6;
+  height: 46px;
+}
+*/
+
+ul li:nth-child(even){
+  padding: 20px;
+  background: #f2f2f2;
+}
+
+ul li span{
+  display: block;
+  margin-block: 1rem;
+}
+
+ul li span:nth-child(1) {
+  font-size: 2rem;
+}
+ul li span:nth-child(2){  
+  margin-top: 6px;
+}
+
+
+ul li span:nth-child(6){
+  font-size: 16px;
+  margin-top: 6px;
+  color: #999;
+}
+
+ul li div{
+  position: absolute;
+  top: 0;
+  right: 0px;
+  background: rgba(255,255,255,0.6);
+  width: 40px;
+  text-align: center;
+  padding: 10px 0;
+  font-weight:  bold;
+  cursor:  pointer;
+} 
+/********************************button*************************/
+.button {
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  margin-top: 1rem;
+  background-color: #081b0a;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 100;
+  font-family: monospace;
+}
+.button:hover {
+  cursor: pointer;
+  color: #2db661;
+  box-shadow: 0 10px 36px rgba(63, 27, 131, 0.15);
+}
+#next-button
+{
+  float: right;
+  margin-right: 45rem;
+  background-color: #2db661;
+}
+#next-button:hover
+{  
+  color: #081b0a;
+}
+#add-button
+{
+  float: right;
+  margin-right: 25rem;  
+  background-color: #2db661;
+}
+#add-button:hover
+{  
+  color: #081b0a;
+}
