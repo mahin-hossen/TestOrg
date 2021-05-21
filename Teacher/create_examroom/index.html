@@ -19,14 +19,12 @@
         <li><a href="#" id="signout">SignOut</a></li>
       </header>
       <section>
-        <div id="first-part">
+        <div id="first-part" class="last_inv">
           <form action="" id="first-form">
             <table id="first-table">
               <tr>
                 <td>
-                  <label for="course-name" id="label-course-name"
-                    >Course Name</label
-                  >
+                  <label for="course-name" id="label-course-name">Course Name</label>                  
                   <input id="course-name" type="text" required/>
                 </td>
               </tr>
@@ -51,11 +49,12 @@
                 </td>
               </tr>
             </table>
+            <p id="time_error">Given time has already passed</p>
             <button class="button" id="next-button">Next</button>
           </form>
         </div>
 
-        <div id="sec_part">
+        <div id="sec_part" class="last_inv">
           <ul id="added-question">
           </ul>
           <form action="" id="second-form">
@@ -66,7 +65,7 @@
                 </td>
               </tr>
               <tr>
-                <td>
+                <td>                  
                   <input type="text" name="" id="Option_1" placeholder="Option 1" required/>
                   <input type="text" name="Option_2" id="" placeholder="Option 2" required/>
                 </td>                
@@ -85,13 +84,26 @@
                 </td>
                 
               </tr>                        
-            </table>
-            <button class="button" id="add-button">Add Question</button>  
-           
+            </table>            
+              <button type="submit" class="button" id="add-button">Add Question</button>              
+              
+          </form>       
+          <form action="" id="third-form">
+            <p id="minimum_question">There needs to be at least one question.</p>
+            <button type="submit" class="button" id="confirm" >Confirm</button>            
           </form>
+              
+
+          
           
         </div>
+        <div id="redirection" class="last_visible">
+          <h1>Your room was Successfuly created</h1>
+          <p>Share this room-id with your student</p>
+        </div>
+        <p class="room_id"></p>
       </section>
+
     </main>
 
 
