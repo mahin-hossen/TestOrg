@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../my_exam_room/style.css" />
+  </head>
+  <body>
+    <main>
+      <header class="login_nav">
+        <li id="home"><a href="">Testorg </a></li>
+        <li><a href="">Profile </a></li>
+        <li>
+          <a href="/Teacher/create_examroom/index.html">Create Examroom</a>
+        </li>
+        <li><a href="../my_exam_room/index.html">My Examroom</a></li>
+        <li><a href="#" id="signout">SignOut</a></li>
+      </header>
+      <section class="container">
+        <!-- <div class="room">
+          <li>
+            <h2>English</h2>
+            <p>Course Teacher : Mahin Hossen</p>
+          </li>
+          <li>
+            <p>Exam Date : 2021-05-27</p>
+            <p>Room Created : 2021-05-22</p>
+          </li>
+          <li>
+            <form action="">
+              <button class="button">See Result</button>
+            </form>
+          </li>
+        </div> -->
+        <div id="noroom">You haven't created any rooms yet</div>
+      </section>
+
+      <!-- ---------------js------------ -->
+
+      <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+
+      <script src="/js/firebase_main.js"></script>
+      <script src="/js/login.js"></script>
+      <script src="/js/signup.js"></script>
+      <script src="/js/signout.js"></script>
+      <script src="/js/myexamroom_teacher.js"></script>
+
+      <script src="https://unpkg.com/scrollreveal"></script>
+      <script src="/script.js"></script>
+    </main>
+  </body>
+</html>

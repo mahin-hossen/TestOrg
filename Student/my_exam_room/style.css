@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+main {
+  /* background-image: url(/pexels-vlada-karpovich-4050287.jpg); */
+  /* background-image: ;
+    background-size: cover; */
+  /* background-color: lightgray; */
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: rgb(60, 39, 155);
+  cursor: pointer;
+  box-shadow: rgb(19, 9, 29);
+}
+
+/*********************** header **********************/
+header {
+  /* background-color: cyan; */
+  /* border: 2px solid blue; */
+
+  color: rgb(62, 95, 95);
+  padding-block: 3rem;
+  padding-bottom: 6rem;
+  /* border: 2px solid black; */
+}
+
+header li {
+  list-style: none;
+  /* float: left;   */
+  font-size: 2.5rem;
+  display: inline-block;
+  margin-inline: 5rem;
+}
+#home {
+  font-size: 5rem;
+}
+/******************************section*****************************/
+#noroom
+{
+    display: none;
+    font-size: 3rem;
+    text-align: center;
+    color: chocolate;
+    margin-top: 15rem;
+}
+
+.container::-webkit-scrollbar
+{
+  display: none;
+}
+
+
+/**********************display**********************/
+.room {
+    border: 2px solid black;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 35px;
+  margin: 20px auto;
+  /* font-size: 1.2em; */
+  font-size: 1.5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+.room h2 {
+  margin-bottom: 0;
+}
+.room p {
+  margin-top: 4px;
+}
+.room li
+{
+    display: inline-block;
+    margin-inline: 4rem;
+    /* border: 1px solid blue; */
+    min-inline-size: 20rem;
+    max-inline-size: 20rem;
+
+}
+
+/**************************exam****************************/
+#exam
+{
+  display: none;
+}
+/**************************clock****************************/
+.clock h2 {
+  font-size: 5rem;
+  font-weight: bold;
+  padding: 3rem;
+}
+.clock {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  /* display: none; */
+}
+.countdown {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.day,
+.hour,
+.minute,
+.second {
+  font-size: 3rem;
+}
+.waiting {
+  height: 50vh;
+  align-items: center;
+}
+
+
+/**************************button***************************/
+.button {
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    margin-top: 1rem;
+    background-color: #081b0a;
+    color: #ffffff;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 100;
+    font-family: monospace;
+  }
+  .button:hover {
+    cursor: pointer;
+    color: #2db661;
+    box-shadow: 0 10px 36px rgba(63, 27, 131, 0.15);
+  }

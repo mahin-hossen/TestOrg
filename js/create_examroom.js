@@ -26,7 +26,7 @@ function renderQuestion(doc, ref) {
   let cross = document.createElement("div");
 
   // li.setAttribute("data-id", doc.id);
-  li.setAttribute("data-id", doc.id);
+  li.setAttribute("data-id", `a` + doc.id);
 
   question.textContent = `Question : ` + doc.data().question;
   a.textContent = `Option-1 : ` + doc.data().a;
@@ -50,10 +50,11 @@ function renderQuestion(doc, ref) {
     e.stopPropagation();
     // let id = e.target.parentElement.getAttribute("id");
     let id = e.target.parentElement.getAttribute("data-id");
-
+    id = id.substring(1);
     // console.log(id);
     // let id = e.target.parentElement.getAttribute("data-id");
     // arr.push(id);
+    
     db.collection("examrooms")
       .doc(ref)
       .collection("questions")
@@ -94,15 +95,17 @@ firstForm.addEventListener("submit", (e) => {
 
     db.collection("examrooms")
       .add({
-        course_teacher: firstForm["course-name"].value,
-        course_name: firstForm["course-teacher"].value,
+        course_teacher: firstForm["course-teacher"].value,
+        course_name: firstForm["course-name"].value,
         exam_date: firstForm["exam-date"].value,
         start_time: firstForm["start-time"].value,
         end_time: firstForm["ending-time"].value,
         user: auth.currentUser.uid,
         completed: 0,
+        
       })
       .then((docRef) => {
+
         secondForm.addEventListener("submit", (e) => {
           e.preventDefault();
           minQues.style.display = "none";
@@ -135,7 +138,7 @@ firstForm.addEventListener("submit", (e) => {
 
                 // let li = questions.querySelector(`[data-id=`+"${change.doc.id}"+ `]`);
                 let li = questions.querySelector(
-                  "[data-id=" + change.doc.id + "]"
+                  "[data-id=" + `a` + change.doc.id + "]"
                 );
                 questions.removeChild(li);
               }
@@ -174,6 +177,7 @@ firstForm.addEventListener("submit", (e) => {
               {
                 total_questions: number,
                 completed: 1,
+                classlink : docRef.id,
               },
               {
                 merge: true,

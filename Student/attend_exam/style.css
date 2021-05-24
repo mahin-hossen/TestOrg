@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  main {
+    /* background-image: url(/pexels-vlada-karpovich-4050287.jpg); */
+    /* background-image: ;
+      background-size: cover; */
+    /* background-color: lightgray; */
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  a:hover {
+    color: rgb(60, 39, 155);
+    cursor: pointer;
+    box-shadow: rgb(19, 9, 29);
+  }
+  
+  /*********************** header **********************/
+  header {
+    /* background-color: cyan; */
+    /* border: 2px solid blue; */
+  
+    color: rgb(62, 95, 95);
+    padding-block: 3rem;
+    padding-bottom: 6rem;
+    /* border: 2px solid black; */
+  }
+  
+  header li {
+    list-style: none;
+    /* float: left;   */
+    font-size: 2.5rem;
+    display: inline-block;
+    margin-inline: 5rem;
+  }
+  #home {
+    font-size: 5rem;
+  }
