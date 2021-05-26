@@ -82,46 +82,10 @@ header li {
     display: inline-block;
     margin-inline: 4rem;
     /* border: 1px solid blue; */
-    min-inline-size: 20rem;
+    min-inline-size: 18rem;
     max-inline-size: 20rem;
 
 }
-
-/**************************exam****************************/
-#exam
-{
-  display: none;
-}
-/**************************clock****************************/
-.clock h2 {
-  font-size: 5rem;
-  font-weight: bold;
-  padding: 3rem;
-}
-.clock {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  /* display: none; */
-}
-.countdown {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-}
-.day,
-.hour,
-.minute,
-.second {
-  font-size: 3rem;
-}
-.waiting {
-  height: 50vh;
-  align-items: center;
-}
-
 
 /**************************button***************************/
 .button {
