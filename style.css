@@ -4,11 +4,11 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 62.5%;
+  /* font-size: 79%; */
+  /* height: 100%; */
 }
-main {
-  background-image: url(/pexels-vlada-karpovich-4050287.jpg);
-  background-position: top;
+html {
+  background-image: url(/bg9.jpg);
 }
 a {
   text-decoration: none;
@@ -19,18 +19,22 @@ a:hover {
 }
 /******************* header ******************/
 header {
-  /* background-color: cyan; */
+  background-color: #0e2431;
   /* border: 2px solid blue; */
-  font-size: 5rem;
-  color: rgb(62, 95, 95);
-  padding-top: 3rem;
+  font-size: 2.5rem;
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+}
+.logo {
+  color: rgb(25, 136, 108);
+  font-size: 3rem;
 }
 
 li {
   list-style: none;
   /* float: left;   */
   display: inline-block;
-  margin-inline: 5rem;
+  margin-inline: 4rem;
 }
 
 /******************* section ******************/
@@ -38,13 +42,13 @@ li {
 section {
   display: inline-block;
   text-align: center;
-  padding-top: 15rem;
-  padding-bottom: 8.5rem;
+  padding-top: 10rem;
+  padding-bottom: 7.5rem;
   width: 100%;
+  /* height: auto; */
 }
-
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-top: 1rem;
   color: rgb(70, 153, 180);
 }
@@ -66,7 +70,7 @@ h1 {
 }
 
 div {
-  color: rgb(52, 121, 98);
+  color: rgb(8, 8, 8);
   font-size: 3rem;
   width: 100%;
 }
@@ -74,16 +78,17 @@ div {
 .login {
   margin-top: 3rem;
 }
-.login label
-{  
+.login label {
   margin-right: 4.5rem;
 }
-#pass
-{
+#pass {
   padding-bottom: 2rem;
 }
 input {
   text-align: center;
+  padding: 8px 13px;
+  border: none;
+  width: 20%;
 }
 #password {
   margin-left: 0.5rem;
@@ -97,43 +102,40 @@ aside {
   font-size: 1.5rem;
   display: inline-block;
   margin-inline: 1rem;
-  color: rgb(109, 96, 96);
+  color: rgb(252, 252, 252);
   padding-top: 1rem;
 }
 #create_acc {
-  color: rgb(77, 102, 53);
+  color: rgb(0, 253, 148);
 }
-.person
-{
+.person {
   font-size: 1.5rem;
   color: rgb(48, 84, 150);
 }
 
-.login_error
-{
-  display: none;  
-  padding-top: 2rem ;
+.login_error {
+  display: none;
+  padding-top: 2rem;
   font-size: 2rem;
-  color:firebrick;
+  color: firebrick;
 }
 
-.login_error a
-{
-  color:firebrick;
+.login_error a {
+  color: firebrick;
 }
 
 /************* footer **************/
 
 footer {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   text-align: center;
-  color: #fff;
-  background-color: #0e2431;
-  bottom: 5;
+  color: rgb(255, 255, 255);
+  /* background-color: #3b454b; */
+  /* bottom: 5; */
   position: absolute;
   width: 100%;
 }
 footer p {
-  margin-block: 2rem;
+  margin-block: 1rem;
 }
