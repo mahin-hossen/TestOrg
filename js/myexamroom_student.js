@@ -19,11 +19,13 @@ auth.onAuthStateChanged((user) => {
 });
 
 /*************************save***************************/
-// import { doc, getDoc } from "firebase/firestore";
 
 function renderRoom(review, doc) {
   const t = "room";
   const t2 = "button";
+
+  console.log(doc.id);
+  console.log(review.id);
 
   let firstLi = document.createElement("li");
   let secLi = document.createElement("li");
@@ -42,10 +44,10 @@ function renderRoom(review, doc) {
   result.setAttribute("class", t2);
   attend.setAttribute("class", t2);
 
-  name.textContent = review.data().course_name;
+  name.textContent = review.data().course_name;  
   teacher.textContent = `Course Teacher : ` + review.data().course_teacher;
   examDate.textContent = `Exam Date : ` + review.data().exam_date;
-  roomCreated.textContent = `Room Created : ` + doc.data().created;
+  roomCreated.textContent = `Room Created : ` + review.data().created;
   result.textContent = "See Result";
   attend.textContent = "Attend Exam";
 
@@ -64,18 +66,75 @@ function renderRoom(review, doc) {
   div.appendChild(fourthLi);
 
   roomList.appendChild(div);
-  
+
   attend.addEventListener("click", (e) => {
     e.stopPropagation();
     let id = e.target.parentElement.parentElement.getAttribute("data-id");
-    console.log(id);
+    // console.log(id);
     container.style.display = "none";
+
+    let startTime = getInGlobalFormat(
+      review.data().exam_date,
+      review.data().start_time
+    );
+    let endTime = getInGlobalFormat(
+      review.data().exam_date,
+      review.data().end_time
+    );
+
+    startTime = new Date(startTime).getTime();
+    endTime = new Date(endTime).getTime();
+    const currentTime = getCurrentTime();
+    const display = document.querySelector("#time");
+
+    console.log(currentTime);
+    console.log(startTime);
+
+    if (startTime > currentTime) {
+      countdown(startTime-currentTime);
+    } else if (currentTime >= startTime && currentTime <= endTime) {
+      countdown(endTime-currentTime);
+      runningExam(review);
+    } else {
+      ("time has passed");
+    }
   });
-  /* cross.addEventListener("click", (e) => {
-    e.stopPropagation();
-    let id = e.target.parentElement.getAttribute("data-id");
-    db.collection("cafes").doc(id).delete();
-  }); */
+}
+runningExam = async (review) =>
+{  
+
+  let option1 = document.querySelector("#option1");
+  let option2 = document.querySelector("#option2");
+  let option3 = document.querySelector("#option3");
+  let option4 = document.querySelector("#option4");
+  let next = document.querySelector("#next");
+
+  let q = document.querySelector("#question");
+  let ans1 = document.querySelector("#ans_1");
+  let ans2 = document.querySelector("#ans_2");
+  let ans3 = document.querySelector("#ans_3");
+  let ans4 = document.querySelector("#ans_4");
+
+  const question = await db.collection("examrooms").doc(review.id).collection("questions").get();
+
+  question.docs.forEach(async (doc)=>
+  {
+    console.log(doc.id);
+    console.log(doc.data());
+    q.innerText = doc.data().question;
+    ans1.innerText = doc.data().a;
+    ans2.innerText = doc.data().b;
+    ans3.innerText = doc.data().c;
+    ans4.innerText = doc.data().d;
+
+    await next.addEventListener("submit",(e)=>
+    {
+      
+    })
+
+    
+  })
+
 }
 
 const getrooms = async () => {
@@ -88,32 +147,44 @@ const getrooms = async () => {
   //output docs
   await data.docs.forEach(async (doc) => {
     const review = await db.collection("examrooms").doc(doc.id).get();
-    console.log(review.data().course_teacher);
-    console.log(doc.id);
+    // console.log(review.data().course_teacher);
+    // console.log(doc.id);
 
     renderRoom(review, doc);
   });
 };
-const countdown = () => {
-  const countDate = new Date("May 24, 2021 16:12:00").getTime();
-  console.log(countdown);
-  const now = new Date().getTime();
-  console.log(now);
-  const gap = countDate - now;
+getCurrentTime = () => {
+  return new Date().getTime();
+};
+
+getInGlobalFormat = (date, time) => {
+  console.log(time);
+  console.log(date);
+  return `${date} ${time}`;
+};
+
+countdown = (gap) => {
 
   const second = 1000;
   const minute = 60 * second;
   const hour = 60 * minute;
   const day = 24 * hour;
-  if (gap <= 0) return;
 
-  const textDay = Math.floor(gap / day);
-  const textHour = Math.floor((gap % day) / hour);
-  const textMinute = Math.floor((gap % hour) / minute);
-  const textSecond = Math.floor((gap % minute) / second);
+  setInterval(() => {
+    gap -= 1000;
 
-  document.querySelector(".day").innerText = textDay;
-  document.querySelector(".hour").innerText = textHour;
-  document.querySelector(".minute").innerText = textMinute;
-  document.querySelector(".second").innerText = textSecond;
+    if (gap <= 0) return;
+
+    const textDay = Math.floor(gap / day);
+    const textHour = Math.floor((gap % day) / hour);
+    const textMinute = Math.floor((gap % hour) / minute);
+    const textSecond = Math.floor((gap % minute) / second);
+
+    document.querySelector(".day").innerText = textDay;
+    document.querySelector(".hour").innerText = textHour;
+    document.querySelector(".minute").innerText = textMinute;
+    document.querySelector(".second").innerText = textSecond;
+  }, 1000);
 };
+
+

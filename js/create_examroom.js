@@ -177,6 +177,7 @@ firstForm.addEventListener("submit", (e) => {
               {
                 total_questions: number,
                 completed: 1,
+                created:final_date,
                 classlink : docRef.id,
               },
               {

@@ -44,6 +44,11 @@ header li {
   font-size: 5rem;
 }
 /******************************section*****************************/
+/*******************************container ***********************/
+.container
+{
+  /* display: none; */
+}
 #noroom
 {
     display: none;
@@ -59,7 +64,7 @@ header li {
 }
 
 
-/**********************display**********************/
+/**********************js css**********************/
 .room {
     border: 2px solid black;
   background: white;
@@ -86,7 +91,76 @@ header li {
     max-inline-size: 20rem;
 
 }
+/******************************clock****************************/
+.clock {
+  min-height: 50vh;
+  /* border: 1px solid black; */
+  /* display: none;   */
+}
 
+.day,
+.hour,
+.minute,
+.second {
+  font-size: 3rem;
+}
+.countdown
+{
+  min-height: 30vh;
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+  
+}
+div h3
+{
+  margin-inline: 3rem;
+}
+
+
+
+/***********************************waiting**********************/
+.waiting_msg {  
+  font-size: 5rem;
+  font-weight: bold;
+  padding: 3rem;
+  text-align: center;
+}
+.waiting
+{
+  display: none;
+}
+/*********************************running*****************************/
+#running_clock
+{
+  border: 2px solid green;
+}
+#question
+{
+  padding-bottom: 5rem;
+}
+.options p
+{
+  display: inline-block;
+}
+#question_table
+{
+  font-size: 2rem;
+  margin:0rem 2rem;
+  border: 2px solid green;
+  
+}
+#question_table .options
+{
+  margin: 0rem 2rem;
+  /* border: 1px solid black; */
+  padding-block: 1rem;
+}
+/********************************finished********************/
+.exam_finished
+{
+  display: none;
+}
 /**************************button***************************/
 .button {
     border: none;
@@ -104,4 +178,9 @@ header li {
     cursor: pointer;
     color: #2db661;
     box-shadow: 0 10px 36px rgba(63, 27, 131, 0.15);
+  }
+  #next
+  {
+    float: right;
+    margin: 0rem 2rem 1rem 0rem;
   }

@@ -17,34 +17,120 @@
         <li><a id="signout">SignOut</a></li>
       </header>
       <section class="container">
-        <div id="room_list"></div>       
+        <div id="room_list"></div>
         <div id="noroom">You haven't created any rooms yet</div>
       </section>
-      <section id="exam">
-        <div class="clock">
-          <div>
-            <h2>We are opening up Soon!</h2>
-            <div class="countdown">
-              <div class="container-day">
-                <h3 class="day">Time</h3>
-                <h3>Day</h3>
-              </div>
-              <div class="container-hour">
-                <h3 class="hour">Time</h3>
-                <h3>Hour</h3>
-              </div>
-              <div class="container-minute">
-                <h3 class="minute">Time</h3>
-                <h3>Minute</h3>
-              </div>
-              <div class="container-seond">
-                <h3 class="second">Time</h3>
-                <h3>Second</h3>
-              </div>
+      <section class="waiting">
+        <h2 class="waiting_msg" id="time">Exam will start in</h2>
+        <section class="clock">
+          <div class="countdown">
+            <div class="container-day">
+              <h3 class="day">Time</h3>
+              <h3>Day</h3>
+            </div>
+            <div class="container-hour">
+              <h3 class="hour">Time</h3>
+              <h3>Hour</h3>
+            </div>
+            <div class="container-minute">
+              <h3 class="minute">Time</h3>
+              <h3>Minute</h3>
+            </div>
+            <div class="container-second">
+              <h3 class="second">Time</h3>
+              <h3>Second</h3>
             </div>
           </div>
-        </div>
+        </section>
       </section>
+      <section id="exam_running">
+        <table>
+          <tr>
+            <td>
+              <section id="exam_running">
+                <table id="question_table">
+                  <tr>
+                    <td>
+                      <p id="question">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to
+                      </p>
+                    </td>
+                  </tr>
+                  <form action="">
+                    <tr>
+                      <td class="options">
+                        <input type="radio" name="ans" id="option1" />
+                        <p id="ans_1"></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="options">
+                        <input type="radio" name="ans" id="option2" />
+                        <p id="ans_2"></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="options">
+                        <input type="radio" name="ans" id="option3" />
+                        <p id="ans_3"></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="options">
+                        <input type="radio" name="ans" id="option4" />
+                        <p id="ans_4"></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <button type="submit" class="button" id="next">
+                          Next
+                        </button>
+                      </td>
+                    </tr>
+                  </form>
+                </table>
+              </section>
+            </td>
+            <td>
+              <section class="clock" id="running_clock">
+                <div class="countdown">
+                  <div class="container-day">
+                    <h3 class="day">Time</h3>
+                    <h3>Day</h3>
+                  </div>
+                  <div class="container-hour">
+                    <h3 class="hour">Time</h3>
+                    <h3>Hour</h3>
+                  </div>
+                  <div class="container-minute">
+                    <h3 class="minute">Time</h3>
+                    <h3>Minute</h3>
+                  </div>
+                  <div class="container-second">
+                    <h3 class="second">Time</h3>
+                    <h3>Second</h3>
+                  </div>
+                </div>
+              </section>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section class="exam_finished">
+        <h2>This Exam has been finished already</h2>
+        <form action="">
+          <button type="submit">Go back</button>
+        </form>
+      </section>
+      <section></section>
+
+      <section id="exam_finished"></section>
+      <section id="exam"></section>
 
       <!-- ---------------js------------ -->
 

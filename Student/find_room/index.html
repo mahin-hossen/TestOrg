@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Examroom</title>
+  </head>
+  <body>
+    <main>
+      <header class="login_nav">
+        <li id="home"><a href="/Student/home_page/index.html">Testorg </a></li>
+        <li><a href="">Profile </a></li>
+        <li><a href="/Student/find_room/index.html">Find Examroom</a></li>
+        <li><a href="/Student/my_exam_room/index.html">My Examroom</a></li>
+        <li><a id="signout">SignOut</a></li>
+        <link rel="stylesheet" href="/Student/find_room/style.css" />
+      </header>
+      <section id="join-sec">
+        <form action="" id="roomForm">
+          <p id="text">Enter your room link here</p>
+          <input type="text" name="" id="room-id" required/>
+          <div id="enter">
+            <button type="submit" class="button" id="join">Enter Room</button>
+          </div>          
+        </form>
+      </section>
+      <div id="success">
+        <p>You have Successfully joined</p>
+      </div>
+      <div id="fail">
+        <p>There is no such room exists</p>
+      </div>
+    </main>
+
+    <!-- ---------------js------------ -->
+
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+
+    <script src="/js/firebase_main.js"></script>
+    <script src="/js/login.js"></script>
+    <script src="/js/signout.js"></script>
+    <script src="/js/findroom.js"></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
