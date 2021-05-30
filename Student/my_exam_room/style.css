@@ -133,28 +133,43 @@ div h3
 /*********************************running*****************************/
 #running_clock
 {
+  display: block;
+  margin: 0 auto;
   border: 2px solid green;
+  right: 0;
+  position: absolute; 
+}
+
+#renderForm 
+{
+  /* border: 1px solid black; */
+  left: 0;
+  position: absolute;
+  width: 50vw;
+  margin-left: 2rem;
+}
+p
+{
+  display: inline;
 }
 #question
 {
-  padding-bottom: 5rem;
-}
-.options p
-{
-  display: inline-block;
-}
-#question_table
-{
   font-size: 2rem;
-  margin:0rem 2rem;
-  border: 2px solid green;
-  
-}
-#question_table .options
-{
-  margin: 0rem 2rem;
+  font-weight: 500;
   /* border: 1px solid black; */
-  padding-block: 1rem;
+}
+
+.option
+{
+  /* display: inline-block; */
+  font-size: 1.5rem;
+  margin-block: 2rem;
+  margin-left: 1rem;    
+}
+#render-part 
+{
+  left: 0px;
+  position: absolute;
 }
 /********************************finished********************/
 .exam_finished

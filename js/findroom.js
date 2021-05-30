@@ -36,6 +36,22 @@ findRoom = (doc) => {
           .collection("students")
           .doc(doc.id)
           .set({});
+
+        db.collection("usersinfo")
+          .doc(auth.currentUser.uid)
+          .collection("myrooms")
+          .doc(id)
+          .set({});
+
+          const user = db.collection("usersinfo").doc(auth.currentUser.uid);
+            user.get().then((e) => {
+              user.set(
+                {
+                  totalrooms: e.data().totalrooms + 1,
+                },
+                { merge: true }
+              );
+            });
       } else {
         joinSection.style.display = "none";
         fail.style.display = "block";

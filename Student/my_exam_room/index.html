@@ -10,10 +10,10 @@
   <body>
     <main>
       <header class="login_nav">
-        <li id="home"><a href="">Testorg </a></li>
+        <li id="home"><a href="/Student/home_page/index.html">Testorg </a></li>
         <li><a href="">Profile </a></li>
-        <li><a href="">Find Examroom</a></li>
-        <li><a href="">My Examroom</a></li>
+        <li><a href="/Student/find_room/index.html">Find Examroom</a></li>
+        <li><a href="/Student/my_exam_room/index.html">My Examroom</a></li>
         <li><a id="signout">SignOut</a></li>
       </header>
       <section class="container">
@@ -44,7 +44,126 @@
         </section>
       </section>
       <section id="exam_running">
-        <table>
+        <section id="render-part">
+          <form action="" id="renderForm">
+            <p id="question"></p>
+            <div class="option">
+              <input type="radio" name="ans" id="option1" required />
+              <p id="ans1"></p>
+            </div>
+            <div class="option">
+              <input type="radio" name="ans" id="option2" required />
+              <p id="ans2"></p>
+            </div>
+            <div class="option">
+              <input type="radio" name="ans" id="option3" required />
+              <p id="ans3"></p>
+            </div>
+            <div class="option">
+              <input type="radio" name="ans" id="option4" required />
+              <p id="ans4"></p>
+            </div>
+
+            <button class="button" id="next">Next</button>
+          </form>
+          <!-- <form action="" id="renderForm">
+            <p id="question">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and
+            </p>
+            <div class="option">
+              <input type="radio" name="ans" id="" required />
+              <p>ans1</p>
+            </div>
+            <div class="option">
+              <input type="radio" name="ans" id="" required />
+              <p>ans2</p>
+            </div>
+            <div class="option">
+              <input type="radio" name="ans" id="" required />
+              <p>ans3</p>
+            </div>
+            <div class="option">
+              <input type="radio" name="ans" id="" required />
+              <p >ans4</p>
+            </div>
+
+            <button class="button" id="next">Next</button>
+          </form> -->
+        </section>
+        <section class="clock" id="running_clock">
+          <div class="countdown">
+            <div class="container-day">
+              <h3 class="day">Time</h3>
+              <h3>Day</h3>
+            </div>
+            <div class="container-hour">
+              <h3 class="hour">Time</h3>
+              <h3>Hour</h3>
+            </div>
+            <div class="container-minute">
+              <h3 class="minute">Time</h3>
+              <h3>Minute</h3>
+            </div>
+            <div class="container-second">
+              <h3 class="second">Time</h3>
+              <h3>Second</h3>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- <table>
+          <div id="render-part">
+            <tr>
+              <td id="question">Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and
+                scrambled it to</td>
+            </tr>
+            <tr>
+              <td id="ans1">option 1</td>
+            </tr>
+            <tr>
+              <td id="ans2">option 2</td>
+            </tr>
+            <tr>
+              <td id="ans3">option 3</td>
+            </tr>
+            <tr>
+              <td id="ans4">option 4</td>
+            </tr>
+          </div>
+          <tr>
+            <td>
+              <section class="clock" id="running_clock">
+                <div class="countdown">
+                  <div class="container-day">
+                    <h3 class="day">Time</h3>
+                    <h3>Day</h3>
+                  </div>
+                  <div class="container-hour">
+                    <h3 class="hour">Time</h3>
+                    <h3>Hour</h3>
+                  </div>
+                  <div class="container-minute">
+                    <h3 class="minute">Time</h3>
+                    <h3>Minute</h3>
+                  </div>
+                  <div class="container-second">
+                    <h3 class="second">Time</h3>
+                    <h3>Second</h3>
+                  </div>
+                </div>
+              </section>
+            </td>
+          </tr>
+        </table> -->
+
+      <!-- <table>
           <tr>
             <td>
               <section id="exam_running">
@@ -60,7 +179,7 @@
                       </p>
                     </td>
                   </tr>
-                  <form action="">
+                  <form action="" id="ansForm">
                     <tr>
                       <td class="options">
                         <input type="radio" name="ans" id="option1" />
@@ -119,8 +238,8 @@
               </section>
             </td>
           </tr>
-        </table>
-      </section>
+        </table> -->
+
       <section class="exam_finished">
         <h2>This Exam has been finished already</h2>
         <form action="">
