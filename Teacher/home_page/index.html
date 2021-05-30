@@ -15,44 +15,45 @@
         <li><a href="">Profile </a></li>
         <li><a href="/Teacher/create_examroom/">Create Examroom</a></li>
         <li><a href="">My Examroom</a></li>
-        <li><a href="#" id="signout">SignOut</a></li>                
+        <li><a href="#" id="signout">SignOut</a></li>
       </header>
       <article>
-        
-        <div id="welcome" class="will_go_down">Welcome Back to TestOrg</div>
+        <!-- <div id="welcome" class="will_go_down">Welcome Back to TestOrg</div> -->
         <table>
           <tr id="first_row">
             <td>
-              <div><p>Create an exam?</p></div>
+              <!-- <div><p>Create an exam?</p></div> -->
               <div class="will_go_down">
-                <p>Go to <a src="#">Create Examroom</a></p>
+                <p><a href="/Teacher/create_examroom/">Create Examroom</a></p>
               </div>
             </td>
             <td>
-              <div><p>Already created a room?</p></div>
+              <!-- <div><p>Already created a room?</p></div> -->
               <div class="will_go_down">
-                <p>Go to <a src="#">My Examroom</a></p>
+                <p><a href="#">My Examroom</a></p>
               </div>
             </td>
           </tr>
         </table>
-        <div class="lower">
-          <p>Still need help?</p>
-          <p class="will_go_down"><a href="/Contact/contact.html">Contact Us</a></p>
-        </div>
       </article>
+      <div class="lower">
+        <p>Still need help?</p>
+        <p class="will_go_down">
+          <a href="/Contact/contact.html">Contact Us</a>
+        </p>
+      </div>
     </main>
 
-        <!-- ---------------js------------ -->
+    <!-- ---------------js------------ -->
 
-        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
-    
-        <script src="/js/firebase_main.js"></script>
-        <script src="/js/signout.js"></script>
-        <script src="https://unpkg.com/scrollreveal"></script>
-        <script src="/script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+
+    <script src="/js/firebase_main.js"></script>
+    <script src="/js/signout.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/script.js"></script>
   </body>
 </html>

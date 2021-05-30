@@ -4,31 +4,29 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 62.5%;
+  background-image: url(/Teacher/create_examroom/bg3.jpg);
 }
-main {
-  /* background-image: url(/pexels-vlada-karpovich-4050287.jpg); */
-  /* background-image: ;
-  background-size: cover; */
-  /* background-color: lightgray; */
-}
+
 a {
   text-decoration: none;
   color: inherit;
 }
 a:hover {
-  color: rgb(60, 39, 155);
+  color: rgb(231, 119, 119);
   cursor: pointer;
   box-shadow: rgb(19, 9, 29);
 }
 
 /*********************** header **********************/
 header {
-  /* background-color: cyan; */
+  background-color: #0e2431;
   /* border: 2px solid blue; */
-
-  color: rgb(62, 95, 95);
-  padding-block: 3rem;
+  /* font-size: 3px; */
+  color: rgb(249, 255, 255);
+  padding-block: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  padding-left: 4rem;
   /* border: 2px solid black; */
 }
 
@@ -37,26 +35,32 @@ header li {
   /* float: left;   */
   font-size: 2.5rem;
   display: inline-block;
-  margin-inline: 5rem;
+  margin-inline: 3rem;
 }
 #home {
-  font-size: 5rem;
+  font-size: 3.5rem;
+  color: rgb(7, 156, 119);
 }
 /**************************section*************************/
 /***************************1st form**********************/
+
 #first-part {
   /* display: none; */
 }
 
 #first-table {
   /* border: 1px solid black; */
+  /* position: center; */
   width: 100%;
-  font-size: 2rem;
+  font-size: 3rem;
+  padding-top: 3rem;
   padding-left: 10rem;
+  /* text-align: center; */
+  color: #060706;
 }
 #first-table td {
   padding-inline: 1rem;
-  padding-block: 4rem;
+  padding-block: 2rem;
   /* border: 1px solid black; */
 }
 #label-course-name {
@@ -71,9 +75,9 @@ label {
 }
 input {
   display: inline-block;
+  padding: 6px 10px;
 }
-#time_error
-{
+#time_error {
   text-align: center;
   font-size: 2rem;
   padding: 2rem 0rem;
@@ -98,12 +102,32 @@ input {
   /* border: 2px solid blue; */
   /* padding-left: 40rem; */
 }
-
+#second-table td textarea {
+  background-color: rgb(255, 249, 249);
+  /* width: 100%; */
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: both;
+}
+::placeholder {
+  color: #180202;
+  font-size: 1rem;
+}
 #second-table td input {
-  margin-inline: 5rem;
+  margin-inline: 1rem;
+  background-color: rgb(113, 185, 170);
+  color: #0c0000;
+  border-radius: 0.4rem;
   /* border: 2px solid red; */
 }
-
+#second-table .option {
+  background-color: #f8f8f8;
+}
 #hide {
   visibility: hidden;
 }
@@ -122,7 +146,6 @@ ul li {
   border-bottom: 1px solid #e6e6e6;
   /* height: 46px; */
 }
-
 
 ul li:nth-child(even) {
   padding: 20px;
@@ -160,8 +183,7 @@ ul li div {
 }
 
 /***************************third-form****************************/
-#third-form
-{
+#third-form {
   display: none;
 }
 /********************************button*************************/
@@ -185,7 +207,7 @@ ul li div {
 #next-button {
   float: right;
   margin-right: 45rem;
-  background-color: #2db661;
+  background-color: #0797da;
 }
 #next-button:hover {
   color: #081b0a;
@@ -203,30 +225,25 @@ ul li div {
   margin-left: 45%;
 }
 
-
 /*********************redirection*******************/
 
-#redirection
-{
+#redirection {
   display: none;
   margin-top: 5rem;
   text-align: center;
   font-size: 2rem;
   color: #2db661;
 }
-#redirection p
-{
+#redirection p {
   margin-top: 5rem;
 }
-.room_id
-{
+.room_id {
   text-align: center;
   font-size: 2rem;
-  color:cornflowerblue;
+  color: cornflowerblue;
   margin-top: 1rem;
 }
-#minimum_question
-{
+#minimum_question {
   display: none;
   text-align: center;
   font-size: 2rem;
