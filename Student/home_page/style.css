@@ -4,58 +4,54 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
+  /* background-image: url(/Teacher/create_examroom/bg3.jpg); */
+  background-color: rgb(34, 37, 49);
 }
 main {
-  /* background-image: url(/pexels-vlada-karpovich-4050287.jpg); */
-  background-image: url(/Student/home_page/pexels-johannes-plenio-2080960.jpg);
-  background-size:cover;
-  
-  
-
+  /* background-image: url(/Teacher/home_page/bg1.jpg); */
+  /* background-image: url(/Student/home_page/pexels-johannes-plenio-2080960.jpg); */
+  background-size: cover;
 }
 a {
   text-decoration: none;
   color: inherit;
 }
 a:hover {
-  color: rgb(60, 39, 155);
+  color: rgb(238, 118, 88);
   cursor: pointer;
   box-shadow: rgb(19, 9, 29);
 }
+
 /******************* header ******************/
 header {
-  /* background-color: cyan; */
   /* border: 2px solid blue; */
 
-  color: rgb(62, 95, 95);
-  padding-top: 3rem;
-  
+  /* background-color: #2b6659; */
+  color: rgb(255, 255, 255);
+  padding: 1rem;
 }
 
 li {
   list-style: none;
   /* float: left;   */
-  font-size: 2.5rem;
+  font-size: 2rem;
   display: inline-block;
-  margin-inline: 5rem;
+  margin-inline: 3rem;
 }
 #home {
-  font-size: 5rem;
+  font-size: 4rem;
+  color: rgb(25, 136, 108);
 }
-
-
 
 /*************************article**********************/
 
-#first_row
-{
-  color:#F2F3F4  ;
+#first_row {
+  color: #f2f3f4;
 }
-#welcome
-{
-  color: #2ECC71  ;
-  margin-top: 12rem;
+#welcome {
+  color: #2ecc71;
+  margin-top: 8rem;
   text-align: center;
 }
 
@@ -63,24 +59,21 @@ div {
   font-size: 3.5rem;
   text-align: center;
 }
-.lower 
-{
+.lower {
   margin-top: 0rem;
-  padding-bottom: 1rem;
+  /* padding-bottom: 1rem; */
 }
 .lower p {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: aliceblue;
-  margin-block: 2rem;     
+  /* margin-block: 2rem; */
 }
-.lower a
-{
-  color: #0f0f09;
+.lower a {
+  color: #00ffaa;
 }
-.lower a:hover
-{
-  color: rgb(37, 107, 37);
-  box-shadow: chartreuse;  
+.lower a:hover {
+  color: rgb(180, 224, 180);
+  box-shadow: chartreuse;
 }
 
 tr p {
@@ -91,31 +84,35 @@ tr p {
   width: 50%;
 }
 table {
-  
   text-align: center;
   width: 100%;
   font-size: 3.5rem;
-  border-collapse: collapse;    
+  border-collapse: collapse;
 }
-table a
-{
-  color: #F5CBA7;
+table a {
+  background-color: rgb(8, 197, 134);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  color: #000000;
 }
-table a:hover
-{
-  color: lightgreen;
+table a:hover {
+  /* color: rgb(22, 85, 69); */
+  color: #0f0f09;
+  background-color: azure;
+}
+article {
+  /* padding-top: 7rem; */
+  /* padding-bottom: 11.5rem; */
+  margin-top: 7rem;
+  margin-bottom: 8rem;
 }
 th {
-  
   width: 100%;
 }
 td {
-  
   width: 50%;
-  padding: 4rem; 
+  padding: 4rem;
 }
-td div
-{
+td div {
   margin-block: 3rem;
 }
-

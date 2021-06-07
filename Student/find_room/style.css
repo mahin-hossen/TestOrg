@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
+  background-color: rgb(5, 19, 26);
 }
 main {
   /* background-image: url(/pexels-vlada-karpovich-4050287.jpg); */
@@ -16,7 +17,7 @@ a {
   color: inherit;
 }
 a:hover {
-  color: rgb(60, 39, 155);
+  color: rgb(192, 70, 0);
   cursor: pointer;
   box-shadow: rgb(19, 9, 29);
 }
@@ -25,44 +26,42 @@ header {
   /* background-color: cyan; */
   /* border: 2px solid blue; */
 
-  color: rgb(62, 95, 95);
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  color: rgb(253, 253, 253);
+  padding-top: 1rem;
+  /* padding-bottom: 1rem; */
 }
 
 li {
   list-style: none;
   /* float: left;   */
-  font-size: 2.5rem;
+  font-size: 2rem;
   display: inline-block;
-  margin-inline: 5rem;
+  margin-inline: 3rem;
 }
 #home {
-  font-size: 5rem;
+  font-size: 4rem;
+  color: #25a178;
 }
 /***************************section***************************/
-section
-{
+section {
   /* display: none; */
 }
 section #text {
   font-size: 2.5rem;
   text-align: center;
-  color: green;
-  margin-top: 12rem;
+  color: rgb(35, 161, 113);
+  margin-top: 8rem;
 }
 section input {
-  border: 2px solid green;
+  border: 2px solid rgb(61, 100, 61);
   padding: 1rem 15rem;
   display: block;
-  margin: 5rem auto;
+  margin: 4rem auto;
 }
-#success
-{
-  display:  none;
+#success {
+  display: none;
 }
-#fail
-{
+#fail {
   display: none;
 }
 div p {
@@ -79,7 +78,7 @@ div p {
   outline: none;
   font-size: 2rem;
   margin-top: 1rem;
-  background-color: #081b0a;
+  background-color: #69756a;
   color: #ffffff;
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
@@ -89,15 +88,15 @@ div p {
 .button:hover {
   cursor: pointer;
   color: #2db661;
-  box-shadow: 0 10px 36px rgba(63, 27, 131, 0.15);
+  box-shadow: 0 10px 36px rgba(170, 31, 31, 0.15);
 }
 #join {
   display: block;
   margin: 0 auto;
   padding: 1rem 3rem;
-  background-color: darkgreen;
+  background-color: rgb(1, 148, 116);
 }
 #join:hover {
-  color: cornflowerblue;
+  color: rgb(0, 0, 0);
   box-shadow: cornflowerblue;
 }

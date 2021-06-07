@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
 }
 main {
   display: block;
@@ -22,25 +22,19 @@ a:hover {
 header {
   /* background-color: cyan; */
   /* border: 2px solid blue; */
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(12, 236, 116, 0.9925012241224614) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
-  font-size: 5rem;
-  color: rgb(62, 95, 95);
-  padding-top: 3rem;
-  height: 20vh;
-  padding-bottom: 2rem;
+  background: rgb(22, 129, 179);
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  padding-top: 1rem;
+  /* height: 20vh; */
+  padding-bottom: 1rem;
 }
 
 li {
   list-style: none;
   /* float: left;   */
   display: inline-block;
-  margin-inline: 5rem;
+  margin-inline: 4rem;
 }
 
 /****************Section*****************/
@@ -48,8 +42,8 @@ li {
   border: none;
   outline: none;
   font-size: 2rem;
-  margin-top: 1rem;
-  background-color: #889299;
+  margin-top: 2rem;
+  background-color: #ffffff;
   color: #10181d;
   padding: 0.25rem 1rem;
   border-radius: 0.5rem;
@@ -60,7 +54,7 @@ li {
   cursor: pointer;
   box-shadow: 0 10px 36px rgba(63, 27, 131, 0.15);
   color: rgb(44, 180, 56);
-  background-color: rgb(52, 121, 98);
+  /* background-color: rgb(19, 243, 168); */
 }
 
 .split {
@@ -84,12 +78,7 @@ img {
   position: absolute;
 
   border: none;
-  background: rgb(63, 94, 251);
-  background: linear-gradient(
-    200deg,
-    rgba(63, 94, 251, 1) 0%,
-    rgba(70, 252, 234, 0.9868989832261029) 100%
-  );
+  background: rgb(29, 67, 122);
   padding-top: 5rem;
 
   right: 0;
@@ -132,5 +121,5 @@ footer {
   height: 15vh;
 }
 p {
-  margin-block: 2rem;
+  margin-block: 1rem;
 }

@@ -8,7 +8,8 @@ html {
   /* height: 100%; */
 }
 html {
-  background-image: url(/bg9.jpg);
+  /* background-image: url(/bg9.jpg); */
+  background-color: #00171f;
 }
 a {
   text-decoration: none;
@@ -19,14 +20,14 @@ a:hover {
 }
 /******************* header ******************/
 header {
-  background-color: #0e2431;
+  background-color: #0e1f29;
   /* border: 2px solid blue; */
   font-size: 2rem;
   color: rgb(255, 255, 255);
   padding: 1rem;
 }
 .logo {
-  color: rgb(25, 136, 108);
+  color: rgb(39, 168, 136);
   font-size: 3rem;
 }
 
@@ -42,8 +43,10 @@ li {
 section {
   display: inline-block;
   text-align: center;
-  padding-top: 10rem;
-  padding-bottom: 7.5rem;
+  /* padding-top: 10rem; */
+  /* padding-bottom: 7.5rem; */
+  margin-top: 10rem;
+  margin-bottom: 5.5rem;
   width: 100%;
   /* height: auto; */
 }
@@ -57,7 +60,7 @@ h1 {
   outline: none;
   font-size: 2rem;
   margin-top: 1rem;
-  background-color: #889299;
+  background-color: #ffffff;
   color: #10181d;
   padding: 0.25rem 1rem;
   border-radius: 0.5rem;
@@ -67,10 +70,11 @@ h1 {
 #button:hover {
   cursor: pointer;
   box-shadow: 0 10px 36px rgba(63, 27, 131, 0.15);
+  background-color: rgb(20, 238, 155);
 }
 
 div {
-  color: rgb(8, 8, 8);
+  color: rgb(252, 250, 250);
   font-size: 3rem;
   width: 100%;
 }
