@@ -5,7 +5,7 @@
 }
 html {
   /* font-size: 62.5%; */
-  /* background-image: url(/Teacher/home_page/bg1.jpg); */
+  /* background-image: url(/Teacher/create_examroom/bg3.jpg); */
   background-color: rgb(34, 37, 49);
 }
 main {
@@ -18,7 +18,7 @@ a {
   color: inherit;
 }
 a:hover {
-  color: rgb(192, 138, 67);
+  color: rgb(238, 118, 88);
   cursor: pointer;
   box-shadow: rgb(19, 9, 29);
 }
@@ -27,6 +27,7 @@ a:hover {
 header {
   /* border: 2px solid blue; */
 
+  /* background-color: #2b6659; */
   color: rgb(255, 255, 255);
   padding: 1rem;
 }
@@ -89,7 +90,7 @@ table {
   border-collapse: collapse;
 }
 table a {
-  background-color: azure;
+  background-color: rgb(8, 197, 134);
   border-radius: 0.5rem;
   padding: 2rem;
   color: #000000;
@@ -97,11 +98,13 @@ table a {
 table a:hover {
   /* color: rgb(22, 85, 69); */
   color: #0f0f09;
-  background-color: rgb(8, 197, 134);
+  background-color: azure;
 }
 article {
-  padding-top: 7rem;
-  padding-bottom: 11.5rem;
+  /* padding-top: 7rem; */
+  /* padding-bottom: 11.5rem; */
+  margin-top: 7rem;
+  margin-bottom: 8rem;
 }
 th {
   width: 100%;

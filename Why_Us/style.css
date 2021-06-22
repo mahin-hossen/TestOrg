@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
 }
 
 a {
@@ -16,17 +16,17 @@ a:hover {
 }
 /******************* header ******************/
 header {
-  font-size: 5rem;
-  color: rgb(62, 95, 95);
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  background-color: #f2e7ed;
+  font-size: 4rem;
+  color: rgb(0, 0, 0);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgb(22, 129, 179);
 }
 
 li {
   list-style: none;
   display: inline-block;
-  margin-inline: 5rem;
+  margin-inline: 3rem;
 }
 
 /******************* body ******************/
@@ -64,8 +64,7 @@ aside {
 .bottom var {
   color: rgb(24, 21, 21);
 }
-.bottom div
-{
+.bottom div {
   margin-left: 10rem;
 }
 .bottom {
@@ -73,6 +72,5 @@ aside {
   /* width: 100%; */
   padding: 30rem 0rem;
   font-family: Georgia, "Times New Roman", Times, serif;
-  background-position:bottom;
+  background-position: bottom;
 }
-

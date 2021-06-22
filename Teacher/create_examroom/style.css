@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 html {
-  background-image: url(/Teacher/create_examroom/bg3.jpg);
+  /* background-image: url(/Teacher/create_examroom/bg3.jpg); */
+  background-color: rgb(46, 155, 128);
 }
 
 a {
@@ -53,10 +54,11 @@ header li {
   /* position: center; */
   width: 100%;
   font-size: 3rem;
-  padding-top: 3rem;
-  padding-left: 10rem;
+  /* padding-top: 3rem;
+  padding-left: 10rem; */
+  margin-top: 1rem;
   /* text-align: center; */
-  color: #060706;
+  color: #000000;
 }
 #first-table td {
   padding-inline: 1rem;
@@ -85,6 +87,7 @@ input {
   color: red;
   display: none;
 }
+
 /*********************************2nd form*******************************/
 #second-form {
   display: none;
@@ -205,20 +208,21 @@ ul li div {
   box-shadow: 0 10px 36px rgba(63, 27, 131, 0.15);
 }
 #next-button {
+  color: #000000;
   float: right;
   margin-right: 45rem;
-  background-color: #0797da;
+  background-color: #fcfcfc;
 }
 #next-button:hover {
-  color: #081b0a;
+  color: #037a53;
 }
 #add-button {
   float: right;
   margin-right: 25rem;
-  background-color: #2db661;
+  background-color: #112418;
 }
 #add-button:hover {
-  color: #081b0a;
+  color: #d2e7d4;
 }
 #confirm {
   /* margin-top: 8rem; */
@@ -232,7 +236,7 @@ ul li div {
   margin-top: 5rem;
   text-align: center;
   font-size: 2rem;
-  color: #2db661;
+  color: #000000;
 }
 #redirection p {
   margin-top: 5rem;
@@ -240,7 +244,7 @@ ul li div {
 .room_id {
   text-align: center;
   font-size: 2rem;
-  color: cornflowerblue;
+  color: rgb(133, 50, 50);
   margin-top: 1rem;
 }
 #minimum_question {
