@@ -93,9 +93,10 @@ header li {
 }
 /******************************clock****************************/
 .clock {
-  min-height: 50vh;
+  
   /* border: 1px solid black; */
   /* display: none;   */
+  
 }
 
 .day,
@@ -126,13 +127,30 @@ div h3
   padding: 3rem;
   text-align: center;
 }
-.waiting
+#waiting_clock
 {
+  /* border: 1px solid black; */
+  /* display:none; */
+  /* visibility: collapse; */
+  
+}
+#go_back
+{
+  display: block;
+  margin: 0 auto;
+  background-color: #2db661;
+  box-shadow:turquoise;
   display: none;
+  
+}
+#go_back:hover
+{
+  color: aqua;
 }
 /*********************************running*****************************/
 #running_clock
 {
+  min-height: 50vh;
   display: block;
   margin: 0 auto;
   border: 2px solid green;
@@ -148,7 +166,7 @@ div h3
   width: 50vw;
   margin-left: 2rem;
 }
-p
+#renderForm  p
 {
   display: inline;
 }
