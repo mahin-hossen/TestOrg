@@ -20,6 +20,7 @@ a:hover {
 }
 /******************* header ******************/
 header {
+  /* position: sticky; */
   background-color: #0e1f29;
   /* border: 2px solid blue; */
   font-size: 2rem;
