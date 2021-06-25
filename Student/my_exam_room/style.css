@@ -211,6 +211,28 @@ div h3
   left: 0px;
   position: absolute;
 }
+#go_back_3
+{
+  
+  display: block;
+  margin: 0 auto;
+  background-color: #2db661;
+  box-shadow:turquoise;  
+}
+#go_back_3:hover
+{
+  color: aqua;
+}
+#message
+{
+  display: none;
+}
+#message div
+{
+  font-size: 3rem;
+  text-align: center;
+  margin: 10rem;
+}
 /********************************finished********************/
 .exam_finished
 {
@@ -230,7 +252,7 @@ div h3
   background-color: #2db661;
   box-shadow:turquoise;  
 }
-#go_back:hover_2
+#go_back_2:hover
 {
   color: aqua;
 }
