@@ -1,5 +1,5 @@
 const container = document.querySelector(".container");
-const noRoom = document.querySelector(".noroom");
+const noRoom = document.querySelector("#noroom");
 const exam = document.querySelector("#exam");
 const roomList = document.querySelector("#room_list");
 const renderPart = document.querySelector("#render-part");
@@ -17,7 +17,14 @@ const ans3 = document.querySelector("#ans3");
 const ans4 = document.querySelector("#ans4");
 
 const goBack = document.getElementById("go_back");
+const goBackTwo = document.getElementById("go_back_2");
+const goBackThree = document.getElementById("go_back_3");
+const waitingHidden = document.getElementById("waiting_hidden");
 
+const waitingPart = document.querySelector(".waiting");
+const runningPart = document.querySelector("#exam_running");
+const finishedPart = document.querySelector(".exam_finished");
+const message = document.querySelector("#message");
 
 auth.onAuthStateChanged((user) => {
   if (user) {
@@ -83,54 +90,79 @@ function renderRoom(review, doc) {
 
   roomList.appendChild(div);
 
-  attend.addEventListener("click", (e) => {
+  attend.addEventListener("click", async (e) => {
     e.stopPropagation();
-    let id = e.target.parentElement.parentElement.getAttribute("data-id");
-    console.log(id);
-    container.style.display = "none";
+    const participation = await db
+      .collection("examrooms")
+      .doc(review.id)
+      .collection("students")
+      .doc(auth.currentUser.uid)
+      .get();
 
-    let startTime = getInGlobalFormat(
-      review.data().exam_date,
-      review.data().start_time
-    );
-    let endTime = getInGlobalFormat(
-      review.data().exam_date,
-      review.data().end_time
-    );
+    // console.log(participation.data().participated);
+    if (participation.data().participated === 1) {
+      document.querySelector(
+        "#message1"
+      ).innerHTML = `You have already participated in this exam...`;
 
-    startTime = new Date(startTime).getTime();
-    endTime = new Date(endTime).getTime();
-    const currentTime = getCurrentTime();
-
-    console.log(currentTime);
-    console.log(startTime);
-      attend:
-      {
-        
-      }
-    if (startTime > currentTime) {
-      waitingFunction(startTime, currentTime, endTime, review);
-      // countdown(startTime - currentTime, 0);
-    } else if (currentTime >= startTime && currentTime <= endTime) {
-      runningFunction(endTime - currentTime, review);
+      container.style.display = "none";
+      message.style.display = "block";
     } else {
-      ("time has passed");
+      let id = e.target.parentElement.parentElement.getAttribute("data-id");
+      console.log(id);
+      container.style.display = "none";
+
+      let startTime = getInGlobalFormat(
+        review.data().exam_date,
+        review.data().start_time
+      );
+      let endTime = getInGlobalFormat(
+        review.data().exam_date,
+        review.data().end_time
+      );
+
+      startTime = new Date(startTime).getTime();
+      endTime = new Date(endTime).getTime();
+
+      if (startTime > endTime) endTime += 86400000;
+
+      const currentTime = getCurrentTime();
+      console.log(currentTime);
+      console.log(startTime);
+      console.log(endTime);
+
+      if (startTime > currentTime) {
+        waitingFunction(startTime, currentTime, endTime, review);
+        // countdown(startTime - currentTime, 0);
+      } else if (currentTime >= startTime && currentTime <= endTime) {
+        runningFunction(endTime - currentTime, review);
+      } else {
+        finishedFunction();
+      }
     }
   });
 }
-goBack.addEventListener("click",(e)=>
-{
+goBack.addEventListener("click", (e) => {
   e.preventDefault();
   console.log("pressed");
   goBack.onclick = location.href = "../my_exam_room/index.html";
-  
-})
+});
+goBackTwo.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log("pressed");
+  goBackTwo.onclick = location.href = "../my_exam_room/index.html";
+});
+goBackThree.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log("pressed");
+  goBackThree.onclick = location.href = "../my_exam_room/index.html";
+});
 waitingFunction = (startTime, currentTime, endTime, review) => {
+  waitingPart.style.display = "block";
   console.log(`end time : ${endTime}`);
   countdown(startTime - currentTime, 0);
   console.log("waiting");
-  
- 
+
   //  .then(()=>
   // {
   //   console.log("back");
@@ -138,39 +170,132 @@ waitingFunction = (startTime, currentTime, endTime, review) => {
   // })
 };
 runningFunction = (time, review) => {
+  runningPart.style.display = "block";
   console.log("inside running");
   countdown(time, 1);
   runningExam(review);
 };
-renderQuestion = async (qID, roomID) => {
-  const timeout = async (ms) => new Promise((res) => setTimeout(res, ms));
-  let userClicked = false;
+finishedFunction = () => {
+  console.log("finished");
+  finishedPart.style.display = "block";
+};
 
-  q.innerHTML = qID.data().question;
-  ans1.innerHTML = qID.data().a;
-  ans2.innerHTML = qID.data().b;
-  ans3.innerHTML = qID.data().c;
-  ans4.innerHTML = qID.data().d;
-  next.addEventListener("click", (e) => {
-    userClicked = true;
-    e.preventDefault();
-    console.log("done");
-  });
+next.addEventListener("click", (e) => {
+  let getSelectedValue = document.querySelector('input[name="ans"]:checked');
+  renderForm.reset();
+  totalAnswered++;
+  console.log(totalAnswered);
+
+  const ans = document.getElementById(`${getSelectedValue.value}`).textContent; ///student's ans
+  let flag;
+  if (ans === qID.data().ans) {
+    totalResult++;
+    flag = true;
+  } else {
+    flag = false;
+  }
+  // console.log(ans3.textContent);
+  userClicked = true;
+  e.preventDefault();
+
+  db.collection("examrooms")
+    .doc(roomID.id)
+    .collection("students")
+    .doc(auth.currentUser.uid)
+    .collection("result")
+    .doc(qID.id)
+    .set(
+      {
+        serial: qID.data().serial,
+        question: qID.data().question, ///respected question
+        correct: flag, ///true/false
+        ans: qID.data().ans, ///original ans
+        student: document.getElementById(`${getSelectedValue.value}`)
+          .textContent, ///student's ans
+      },
+      {
+        merge: true,
+      }
+    );
+
+  if (totalAnswered === totalQ) {
+    examFinished = 1;
+    questionFinished(1);
+  }
+});
+
+renderQuestion = async (qID, roomID, ongoing, totalQ) => {
+  window.examFinished = 0;
+
+  const timeout = async (ms) => new Promise((res) => setTimeout(res, ms));
+  window.userClicked = false;
+  window.roomID = roomID;
+  window.qID = qID;
+  console.log("render");
+
+  let arr = [ans1, ans2, ans3, ans4]; //option er array
+
+  for (let i = arr.length - 1; i > 0; i--) {
+    ////randomizing array
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+  }
+  for (let i = 0; i < arr.length; i++) console.log(arr[i]);
+
+  q.innerHTML =
+    `${ongoing}/${totalQ}` + `&nbsp;&nbsp;&nbsp;&nbsp;` + qID.data().question;
+  arr[0].innerHTML = qID.data().a;
+  arr[1].innerHTML = qID.data().b;
+  arr[2].innerHTML = qID.data().c;
+  arr[3].innerHTML = qID.data().d;
 
   while (userClicked === false) await timeout(50);
 };
+questionFinished = (
+  time //if time = 0 time finished //time = 1 all questions finished
+) => {
+  if (time === 0 && examFinished === 0) {
+    document.querySelector(
+      "#message1"
+    ).innerHTML = `Opps!!! Provided time finished. You have Answered ${totalAnswered}/${totalQ}  Questions`;
+  } else {
+    document.querySelector(
+      "#message2"
+    ).innerHTML = `You have Answered ${totalAnswered}/${totalQ} Questions. Best of Luck ...`;
+  }
+  runningPart.style.display = "none";
+  message.style.display = "block";
 
+  db.collection("examrooms")
+    .doc(roomID.id)
+    .collection("students")
+    .doc(auth.currentUser.uid)
+    .set({
+      totalAnswered: totalAnswered,
+      totalResult: totalResult,
+      participated: 1,
+    });
+};
 runningExam = async (review) => {
-  const totalQ = review.data().total_questions;
+  window.totalQ = review.data().total_questions; //totalQ = total question
+  // const totalQ = review.data().total_questions; //totalQ = total question
+  window.totalAnswered = 0;
+  window.totalResult = 0;
+
   let arr = [];
   for (let i = 0; i <= totalQ; i++) {
     arr.push(false);
   }
   let n = totalQ;
 
+  window.ongoing = 0;
+  // let ongoing = 0;
   while (n) {
     let randomNumber = getRandom(totalQ);
     if (!arr[randomNumber]) {
+      ongoing++;
       arr[randomNumber] = true;
       await db
         .collection("examrooms")
@@ -180,7 +305,8 @@ runningExam = async (review) => {
         .get()
         .then(async (snapshot) => {
           for (let doc of snapshot.docs) {
-            await renderQuestion(doc, review);
+            console.log("runningexam");
+            await renderQuestion(doc, review, ongoing, totalQ);
           }
         });
       n--;
@@ -238,15 +364,18 @@ countdown = (gap, flag) => {
   const day = 24 * hour;
 
   setInterval(() => {
-    console.log(gap);
-    console.log("set interval");
+    // console.log(gap);
+    // console.log("set interval");
     gap -= 1000;
 
-    if (gap <= 0 && flag==0)
-    {
-      goBack.style.display="block";
+    if (gap <= 0 && flag == 0) {
+      ///flag==0 means waiting
+      waitingHidden.style.display = "block";
       return;
-    } 
+    } else if (gap <= 0 && flag == 1) {
+      questionFinished(0);
+      return;
+    }
 
     const textDay = Math.floor(gap / day);
     const textHour = Math.floor((gap % day) / hour);

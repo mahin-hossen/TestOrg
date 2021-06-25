@@ -26,6 +26,7 @@ header {
   padding-top: 1rem;
   padding-bottom: 1rem;
   background-color: rgb(22, 129, 179);
+  /* position:fixed; */
 }
 
 li {

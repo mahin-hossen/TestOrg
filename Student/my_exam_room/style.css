@@ -121,6 +121,10 @@ div h3
 
 
 /***********************************waiting**********************/
+.waiting
+{
+  display: none;
+}
 .waiting_msg {  
   font-size: 5rem;
   font-weight: bold;
@@ -134,20 +138,32 @@ div h3
   /* visibility: collapse; */
   
 }
+#waiting_hidden
+{
+  display: none;
+}
+#waiting_hidden h1
+{
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
 #go_back
 {
   display: block;
   margin: 0 auto;
   background-color: #2db661;
-  box-shadow:turquoise;
-  display: none;
-  
+  box-shadow:turquoise;  
 }
 #go_back:hover
 {
   color: aqua;
 }
 /*********************************running*****************************/
+#exam_running
+{
+  display: none;
+}
 #running_clock
 {
   min-height: 50vh;
@@ -158,6 +174,12 @@ div h3
   position: absolute; 
 }
 
+#running_clock h1
+{
+  text-align: center;
+  font-size: 2rem;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 #renderForm 
 {
   /* border: 1px solid black; */
@@ -189,10 +211,50 @@ div h3
   left: 0px;
   position: absolute;
 }
+#go_back_3
+{
+  
+  display: block;
+  margin: 0 auto;
+  background-color: #2db661;
+  box-shadow:turquoise;  
+}
+#go_back_3:hover
+{
+  color: aqua;
+}
+#message
+{
+  display: none;
+}
+#message div
+{
+  font-size: 3rem;
+  text-align: center;
+  margin: 10rem;
+}
 /********************************finished********************/
 .exam_finished
 {
+  
   display: none;
+}
+.exam_finished h1
+{
+  font-size: 4rem;
+  text-align: center;
+  padding: 8rem 0rem 10rem 0rem;
+}
+#go_back_2
+{
+  display: block;
+  margin: 0 auto;
+  background-color: #2db661;
+  box-shadow:turquoise;  
+}
+#go_back_2:hover
+{
+  color: aqua;
 }
 /**************************button***************************/
 .button {
