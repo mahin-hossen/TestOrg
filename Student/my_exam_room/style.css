@@ -45,28 +45,24 @@ header li {
 }
 /******************************section*****************************/
 /*******************************container ***********************/
-.container
-{
+.container {
   /* display: none; */
 }
-#noroom
-{
-    display: none;
-    font-size: 3rem;
-    text-align: center;
-    color: chocolate;
-    margin-top: 15rem;
+#noroom {
+  display: none;
+  font-size: 3rem;
+  text-align: center;
+  color: chocolate;
+  margin-top: 15rem;
 }
 
-.container::-webkit-scrollbar
-{
+.container::-webkit-scrollbar {
   display: none;
 }
 
-
 /**********************js css**********************/
 .room {
-    border: 2px solid black;
+  border: 2px solid black;
   background: white;
   padding: 10px 20px;
   border-radius: 35px;
@@ -82,21 +78,17 @@ header li {
 .room p {
   margin-top: 4px;
 }
-.room li
-{
-    display: inline-block;
-    margin-inline: 4rem;
-    /* border: 1px solid blue; */
-    min-inline-size: 18rem;
-    max-inline-size: 20rem;
-
+.room li {
+  display: inline-block;
+  margin-inline: 4rem;
+  /* border: 1px solid blue; */
+  min-inline-size: 18rem;
+  max-inline-size: 20rem;
 }
 /******************************clock****************************/
 .clock {
-  
   /* border: 1px solid black; */
   /* display: none;   */
-  
 }
 
 .day,
@@ -105,177 +97,201 @@ header li {
 .second {
   font-size: 3rem;
 }
-.countdown
-{
+.countdown {
   min-height: 30vh;
   display: flex;
-  align-items: center;  
+  align-items: center;
   justify-content: center;
-  
 }
-div h3
-{
+div h3 {
   margin-inline: 3rem;
 }
 
-
-
 /***********************************waiting**********************/
-.waiting
-{
+.waiting {
   display: none;
 }
-.waiting_msg {  
+.waiting_msg {
   font-size: 5rem;
   font-weight: bold;
   padding: 3rem;
   text-align: center;
 }
-#waiting_clock
-{
+#waiting_clock {
   /* border: 1px solid black; */
   /* display:none; */
   /* visibility: collapse; */
-  
 }
-#waiting_hidden
-{
+#waiting_hidden {
   display: none;
 }
-#waiting_hidden h1
-{
+#waiting_hidden h1 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-#go_back
-{
+#go_back {
   display: block;
   margin: 0 auto;
   background-color: #2db661;
-  box-shadow:turquoise;  
+  box-shadow: turquoise;
 }
-#go_back:hover
-{
+#go_back:hover {
   color: aqua;
 }
 /*********************************running*****************************/
-#exam_running
-{
+#exam_running {
   display: none;
 }
-#running_clock
-{
+#running_clock {
   min-height: 50vh;
   display: block;
   margin: 0 auto;
   border: 2px solid green;
   right: 0;
-  position: absolute; 
+  position: absolute;
 }
 
-#running_clock h1
-{
+#running_clock h1 {
   text-align: center;
   font-size: 2rem;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-#renderForm 
-{
+#renderForm {
   /* border: 1px solid black; */
   left: 0;
   position: absolute;
   width: 50vw;
   margin-left: 2rem;
 }
-#renderForm  p
-{
+#renderForm p {
   display: inline;
 }
-#question
-{
+#question {
   font-size: 2rem;
   font-weight: 500;
   /* border: 1px solid black; */
 }
 
-.option
-{
+.option {
   /* display: inline-block; */
   font-size: 1.5rem;
   margin-block: 2rem;
-  margin-left: 1rem;    
+  margin-left: 1rem;
 }
-#render-part 
-{
+#render-part {
   left: 0px;
   position: absolute;
 }
-#go_back_3
-{
-  
+#go_back_3 {
   display: block;
   margin: 0 auto;
   background-color: #2db661;
-  box-shadow:turquoise;  
+  box-shadow: turquoise;
 }
-#go_back_3:hover
-{
+#go_back_3:hover {
   color: aqua;
 }
-#message
-{
+#message {
   display: none;
 }
-#message div
-{
+#message div {
   font-size: 3rem;
   text-align: center;
   margin: 10rem;
 }
 /********************************finished********************/
-.exam_finished
-{
-  
+.exam_finished {
   display: none;
 }
-.exam_finished h1
-{
+.exam_finished h1 {
   font-size: 4rem;
   text-align: center;
   padding: 8rem 0rem 10rem 0rem;
 }
-#go_back_2
-{
+#go_back_2 {
   display: block;
   margin: 0 auto;
   background-color: #2db661;
-  box-shadow:turquoise;  
+  box-shadow: turquoise;
 }
-#go_back_2:hover
-{
+#go_back_2:hover {
   color: aqua;
 }
+/*********************************** see_result *******************************/
+
+.top_section {
+  display: none;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  border: 1px solid black;
+  border-radius: 3rem;
+}
+.top_section p {
+  font-size: 2rem;
+  /* margin-inline: 10rem; */
+  max-width: 30vw; 
+  min-width: 40vw;
+  display: inline-flex;  
+  margin: 0rem 0rem 0rem 5rem;
+  
+}
+.render_result {
+  margin: 2rem 5rem 2rem 5rem;
+  font-size: 2rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding-bottom: 3rem;
+  border: 2px solid black;
+  border-radius: 1.2rem;
+}
+.render_result p {
+  margin-inline: 2rem;
+  max-width: 40vw;
+  min-width: 40vw;
+  display: inline-flex;  
+}
+.quote
+{
+  margin-bottom: 1rem;
+  font-weight: 500;  
+}
+
+#question {
+  padding-bottom: 3rem;
+  margin-top: 1rem;
+  margin-inline: 1rem;
+}
+/*  #correct_ans
+{
+  float: left;
+}
+
+#your_ans
+{
+  float: right;
+} */
+
 /**************************button***************************/
 .button {
-    border: none;
-    outline: none;
-    font-size: 2rem;
-    margin-top: 1rem;
-    background-color: #081b0a;
-    color: #ffffff;
-    padding: 0.75rem 1rem;
-    border-radius: 0.5rem;
-    font-weight: 100;
-    font-family: monospace;
-  }
-  .button:hover {
-    cursor: pointer;
-    color: #2db661;
-    box-shadow: 0 10px 36px rgba(63, 27, 131, 0.15);
-  }
-  #next
-  {
-    float: right;
-    margin: 0rem 2rem 1rem 0rem;
-  }
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  margin-top: 1rem;
+  background-color: #081b0a;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 100;
+  font-family: monospace;
+}
+.button:hover {
+  cursor: pointer;
+  color: #2db661;
+  box-shadow: 0 10px 36px rgba(63, 27, 131, 0.15);
+}
+#next {
+  float: right;
+  margin: 0rem 2rem 1rem 0rem;
+}

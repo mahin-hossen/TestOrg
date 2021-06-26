@@ -35,7 +35,9 @@ findRoom = (doc) => {
           .doc(id)
           .collection("students")
           .doc(doc.id)
-          .set({});
+          .set({
+            participated:0,
+          });
 
         db.collection("usersinfo")
           .doc(auth.currentUser.uid)

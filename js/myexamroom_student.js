@@ -26,6 +26,8 @@ const runningPart = document.querySelector("#exam_running");
 const finishedPart = document.querySelector(".exam_finished");
 const message = document.querySelector("#message");
 
+const renderDiv = document.querySelector("#render");
+
 auth.onAuthStateChanged((user) => {
   if (user) {
     const currUser = db.collection("usersinfo").doc(auth.currentUser.uid);
@@ -141,7 +143,107 @@ function renderRoom(review, doc) {
       }
     }
   });
+
+  result.addEventListener("click", async (e) => {
+    const st = await db
+      .collection("examrooms")
+      .doc(review.id)
+      .collection("students")
+      .doc(auth.currentUser.uid)
+      .get();
+
+
+    if (st.data().participated === 0) {
+      document.querySelector(
+        "#message1"
+      ).innerHTML = `You haven't participated in this exam...`;
+
+      container.style.display = "none";
+      message.style.display = "block";
+    } else {
+      document.querySelector(".top_section").style.display = "block";
+      container.style.display= "none";
+
+
+      document.querySelector("#course_name").innerHTML =
+        `Course Name : ` + review.data().course_name;
+      document.querySelector("#exam_date").innerHTML =
+        `Exam Date : ` + review.data().exam_date;
+      document.querySelector("#finalResult").innerHTML =
+        `Your Score : ` + st.data().totalResult;
+      document.querySelector("#answered").innerHTML =
+        `Your Answered : ` + st.data().totalAnswered + `/`+review.data().total_questions;
+
+      const studentResult = await db
+        .collection("examrooms")
+        .doc(review.id)
+        .collection("students")
+        .doc(auth.currentUser.uid)
+        .collection("result")
+        .get();
+
+      studentResult.docs.forEach(async (doc) => {
+        const detailedResult = await db
+          .collection("examrooms")
+          .doc(review.id)
+          .collection("students")
+          .doc(auth.currentUser.uid)
+          .collection("result")
+          .doc(doc.id)
+          .get();
+        console.log(detailedResult);
+        console.log(detailedResult.data());
+
+        renderResult(detailedResult);
+      });
+    }
+  });
 }
+
+renderResult = (resultID) => {
+  const t1 = "quote";
+  const t2 = "your_ans";
+  const t3 = "correct_ans";
+
+  let render = document.createElement("div");
+  let trow1 = document.createElement("tr");
+  let trow2 = document.createElement("tr");
+  let q = document.createElement("h1");
+  let quote1 = document.createElement("p");
+  let quote2 = document.createElement("p");
+  let p1 = document.createElement("p");
+  let p2 = document.createElement("p");
+
+  render.setAttribute("class", "render_result");
+  q.setAttribute("id", "question");
+  quote1.setAttribute("class", "quote");
+  quote2.setAttribute("class", "quote");
+  p1.setAttribute("id", "your_ans");
+  p2.setAttribute("id", "correct_ans");
+
+  q.textContent = resultID.data().question;
+  quote1.textContent = `Correct Answer : `;
+  quote2.textContent = `Your Answer : `;
+  p1.textContent = resultID.data().ans;
+  p2.textContent = resultID.data().student;
+
+  trow2.appendChild(p1);
+  trow2.appendChild(p2);
+
+  trow1.appendChild(quote1);
+  trow1.appendChild(quote2);
+
+  render.appendChild(q);
+  render.appendChild(trow1);
+  render.appendChild(trow2);
+
+  renderDiv.appendChild(render);
+  if (resultID.data().correct) {
+    render.style.backgroundColor = "#ccfbcc";
+  } else {
+    render.style.backgroundColor = "#e69d9d";
+  }
+};
 goBack.addEventListener("click", (e) => {
   e.preventDefault();
   console.log("pressed");
@@ -183,7 +285,21 @@ finishedFunction = () => {
 next.addEventListener("click", (e) => {
   let getSelectedValue = document.querySelector('input[name="ans"]:checked');
   renderForm.reset();
+  console.log(flag2);
   totalAnswered++;
+  if(!flag2)
+  {
+    db.collection("examrooms")
+    .doc(roomID.id)
+    .collection("students")
+    .doc(auth.currentUser.uid)
+    .set({
+      participated: 1,
+    });
+    
+
+    flag2=1;
+  }
   console.log(totalAnswered);
 
   const ans = document.getElementById(`${getSelectedValue.value}`).textContent; ///student's ans
@@ -283,6 +399,7 @@ runningExam = async (review) => {
   // const totalQ = review.data().total_questions; //totalQ = total question
   window.totalAnswered = 0;
   window.totalResult = 0;
+  window.flag2 = 0;
 
   let arr = [];
   for (let i = 0; i <= totalQ; i++) {
