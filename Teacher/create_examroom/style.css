@@ -142,17 +142,17 @@ ul {
 }
 ul li {
   padding: 2rem;
-  background: #f6f6f6;
+  background: #ffffff;
   font-size: 1.5rem;
-  color: #555;
+  color: rgb(0, 0, 0);
   position: relative;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 5px solid #1ee6a3;
   /* height: 46px; */
 }
 
 ul li:nth-child(even) {
   padding: 20px;
-  background: #f2f2f2;
+  background: #ffffff;
 }
 
 ul li span {
@@ -162,25 +162,30 @@ ul li span {
 
 ul li span:nth-child(1) {
   font-size: 2rem;
+  color: #00273d;
 }
 ul li span:nth-child(2) {
   margin-top: 6px;
 }
 
 ul li span:nth-child(6) {
-  font-size: 16px;
+  font-size: 1.5rem;
   margin-top: 6px;
-  color: #999;
+  color: rgb(0, 0, 0);
+  background: #0fe6b0;
+  display: inline-flex;
+  padding: 5px 10px 5px 10px;
 }
 
 ul li div {
   position: absolute;
   top: 0;
   right: 0px;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgb(135, 145, 142);
+  border-radius: 5rem;
   width: 40px;
   text-align: center;
-  padding: 10px 0;
+  padding: 7px 0;
   font-weight: bold;
   cursor: pointer;
 }

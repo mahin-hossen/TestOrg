@@ -120,13 +120,13 @@ aside {
 
 .login_error {
   display: none;
-  padding-top: 2rem;
+  padding-top: 1rem;
   font-size: 2rem;
-  color: firebrick;
+  color: rgb(243, 96, 108);
 }
 
 .login_error a {
-  color: firebrick;
+  color: rgb(243, 96, 108) k;
 }
 
 /************* footer **************/

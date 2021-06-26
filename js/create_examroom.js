@@ -54,7 +54,7 @@ function renderQuestion(doc, ref) {
     // console.log(id);
     // let id = e.target.parentElement.getAttribute("data-id");
     // arr.push(id);
-    
+
     db.collection("examrooms")
       .doc(ref)
       .collection("questions")
@@ -102,10 +102,8 @@ firstForm.addEventListener("submit", (e) => {
         end_time: firstForm["ending-time"].value,
         user: auth.currentUser.uid,
         completed: 0,
-        
       })
       .then((docRef) => {
-
         secondForm.addEventListener("submit", (e) => {
           e.preventDefault();
           minQues.style.display = "none";
@@ -177,8 +175,8 @@ firstForm.addEventListener("submit", (e) => {
               {
                 total_questions: number,
                 completed: 1,
-                created:final_date,
-                classlink : docRef.id,
+                created: final_date,
+                classlink: docRef.id,
               },
               {
                 merge: true,
