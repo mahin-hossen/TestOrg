@@ -152,7 +152,6 @@ function renderRoom(review, doc) {
       .doc(auth.currentUser.uid)
       .get();
 
-
     if (st.data().participated === 0) {
       document.querySelector(
         "#message1"
@@ -162,8 +161,7 @@ function renderRoom(review, doc) {
       message.style.display = "block";
     } else {
       document.querySelector(".top_section").style.display = "block";
-      container.style.display= "none";
-
+      container.style.display = "none";
 
       document.querySelector("#course_name").innerHTML =
         `Course Name : ` + review.data().course_name;
@@ -172,7 +170,10 @@ function renderRoom(review, doc) {
       document.querySelector("#finalResult").innerHTML =
         `Your Score : ` + st.data().totalResult;
       document.querySelector("#answered").innerHTML =
-        `Your Answered : ` + st.data().totalAnswered + `/`+review.data().total_questions;
+        `Your Answered : ` +
+        st.data().totalAnswered +
+        `/` +
+        review.data().total_questions;
 
       const studentResult = await db
         .collection("examrooms")
@@ -287,18 +288,16 @@ next.addEventListener("click", (e) => {
   renderForm.reset();
   console.log(flag2);
   totalAnswered++;
-  if(!flag2)
-  {
+  if (!flag2) {
     db.collection("examrooms")
-    .doc(roomID.id)
-    .collection("students")
-    .doc(auth.currentUser.uid)
-    .set({
-      participated: 1,
-    });
-    
+      .doc(roomID.id)
+      .collection("students")
+      .doc(auth.currentUser.uid)
+      .set({
+        participated: 1,
+      });
 
-    flag2=1;
+    flag2 = 1;
   }
   console.log(totalAnswered);
 
@@ -375,7 +374,7 @@ questionFinished = (
   if (time === 0 && examFinished === 0) {
     document.querySelector(
       "#message1"
-    ).innerHTML = `Opps!!! Provided time finished. You have Answered ${totalAnswered}/${totalQ}  Questions`;
+    ).innerHTML = `Opps!!! Provided time finished. You have Answered ${totalAnswered}/${totalQ}  Questions.`;
   } else {
     document.querySelector(
       "#message2"
