@@ -386,7 +386,7 @@ questionFinished = (
   if (time === 0 && examFinished === 0) {
     document.querySelector(
       "#message1"
-    ).innerHTML = `Opps!!! Provided time finished. You have Answered ${totalAnswered}/${totalQ}  Questions`;
+    ).innerHTML = `Opps!!! Provided time finished. You have Answered ${totalAnswered}/${totalQ}  Questions.`;
   } else {
     document.querySelector(
       "#message2"

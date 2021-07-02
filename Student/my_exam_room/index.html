@@ -60,17 +60,18 @@
         <section id="render-part">
           <form action="" id="renderForm">
             <p id="question"></p>
-            <div class="option">
-              <input
+            <label class="option">
+              <input checked="checked"
                 type="radio"
                 name="ans"
                 id="option1"
                 value="ans1"
                 required
               />
+              <span class="checkmark"></span>
               <p id="ans1"></p>
-            </div>
-            <div class="option">
+            </label>
+            <label class="option">
               <input
                 type="radio"
                 name="ans"
@@ -78,9 +79,10 @@
                 value="ans2"
                 required
               />
+              <span class="checkmark"></span>
               <p id="ans2"></p>
-            </div>
-            <div class="option">
+            </label>
+            <label class="option">
               <input
                 type="radio"
                 name="ans"
@@ -88,9 +90,10 @@
                 value="ans3"
                 required
               />
+              <span class="checkmark"></span>
               <p id="ans3"></p>
-            </div>
-            <div class="option">
+            </label>
+            <label class="option">
               <input
                 type="radio"
                 name="ans"
@@ -98,8 +101,9 @@
                 value="ans4"
                 required
               />
+              <span class="checkmark"></span>
               <p id="ans4"></p>
-            </div>
+            </label>
 
             <button class="button" id="next" type="submit">Next</button>
           </form>

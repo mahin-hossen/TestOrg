@@ -31,6 +31,21 @@ loginForm.addEventListener("submit", (e) => {
   );
 });
 
+// const loginWithGoogleButton = document.getElementById("loginWithGoogle");
+
+// const loginWithGoogle = () => {
+//   const googleProvider = new firebaseConfig.auth.GoogleAuthProvider();
+//   auth
+//     .signInWithRedirect(googleProvider)
+//     .then((cred) => {
+//       window.location.assign("./Student/home_page");
+//     })
+//     .catch((error) => {
+//       console.error(error);
+//     });
+// };
+// loginWithGoogleButton.addEventListener("click", loginWithGoogle);
+
 //listen for auth changes
 
 auth.onAuthStateChanged((user) => {
