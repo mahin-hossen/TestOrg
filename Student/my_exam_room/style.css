@@ -84,7 +84,7 @@ header li {
   display: inline-block;
   margin-inline: 2rem;
   /* border: 1px solid blue; */
-  min-inline-size: 16rem;
+  min-inline-size: 1rem;
   max-inline-size: 20rem;
 }
 /******************************clock****************************/
@@ -183,7 +183,7 @@ div h3 {
 #question {
   font-size: 2rem;
   font-weight: 500;
-  color: #cfcfcf;
+  color: #ffffff;
   /* border: 1px solid black; */
 }
 
@@ -292,8 +292,8 @@ div h3 {
   margin-left: 5rem;
   margin-right: 5rem;
   border: 2px solid rgb(0, 0, 0);
-  border-radius: 1.5rem;
-  padding: 0.5rem;
+  /* border-radius: 1.5rem; */
+  padding: 1rem;
   background-color: #ffffff;
 }
 .top_section p {
@@ -308,7 +308,7 @@ div h3 {
 }
 .render_result {
   margin: 2rem 5rem 2rem 5rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   padding-bottom: 3rem;
@@ -362,5 +362,5 @@ div h3 {
 }
 #next {
   float: right;
-  margin: 0rem 2rem 1rem 0rem;
+  margin: 7rem 1rem 1rem 0rem;
 }

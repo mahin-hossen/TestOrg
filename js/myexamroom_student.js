@@ -252,9 +252,9 @@ renderResult = (resultID) => {
 
   renderDiv.appendChild(render);
   if (resultID.data().correct) {
-    render.style.backgroundColor = "#ccfbcc";
+    render.style.backgroundColor = "#33b998";
   } else {
-    render.style.backgroundColor = "#e69d9d";
+    render.style.backgroundColor = "#ff8383";
   }
 };
 goBack.addEventListener("click", (e) => {
