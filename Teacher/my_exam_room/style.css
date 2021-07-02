@@ -53,6 +53,10 @@ header li {
   color: chocolate;
   margin-top: 15rem;
 }
+.container
+{
+  /* display: none; */
+}
 
 .container::-webkit-scrollbar {
   display: none;
@@ -82,6 +86,74 @@ header li {
   /* border: 1px solid blue; */
   min-inline-size: 18rem;
   max-inline-size: 20rem;
+}
+/***************************** renderResult***********************/
+.renderResult
+{
+  font-size: 2rem;
+  /* border: 1px solid black; */
+  /* margin: 0rem 2rem; */
+}
+.renderResult p
+{
+  display: inline-flex;
+  min-width: 35rem;
+}
+#firstDiv
+{
+  border: 1px solid black;
+}
+.renderResult div
+{
+  margin-block: 0.5rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+#details
+{
+  float:right;
+  margin-right: 1rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  margin-top: 0rem;  
+  padding: 0.55rem .25rem;
+  border-radius: 0.5rem 0rem 0.5rem 0.5rem;
+  font-weight: 100;
+  font-family: monospace; 
+
+}
+/***********************detailedResult**********************/
+.render_result {
+  margin: 2rem 5rem 2rem 5rem;
+  font-size: 2rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding-bottom: 3rem;
+  border: 2px solid black;
+  border-radius: 1.2rem;
+}
+.render_result p {
+  margin-inline: 2rem;
+  max-width: 40vw;
+  min-width: 40vw;
+  display: inline-flex;  
+}
+/*************************************message**********************/
+.message
+{
+  display: none;
+  text-align: center;
+  font-size: 3rem;
+
+}
+.message #message1
+{
+  padding-bottom: 5rem;
+}
+#go_back
+{
+  background-color: #2db661;
 }
 
 /**************************button***************************/

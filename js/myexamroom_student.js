@@ -113,6 +113,16 @@ function renderRoom(review, doc) {
       let id = e.target.parentElement.parentElement.getAttribute("data-id");
       console.log(id);
       container.style.display = "none";
+      /*  let d = new Date();
+      let x = review.data().exam_date;
+      console.log(d);
+      console.log(d.getTime());
+      
+      console.log(x);
+      let ret = parseDate(x);
+      console.log(ret); */
+      // console.log(x.getTime());
+      // if(d===x) console.log("yes");
 
       let startTime = getInGlobalFormat(
         review.data().exam_date,
@@ -152,7 +162,6 @@ function renderRoom(review, doc) {
       .doc(auth.currentUser.uid)
       .get();
 
-
     if (st.data().participated === 0) {
       document.querySelector(
         "#message1"
@@ -162,8 +171,7 @@ function renderRoom(review, doc) {
       message.style.display = "block";
     } else {
       document.querySelector(".top_section").style.display = "block";
-      container.style.display= "none";
-
+      container.style.display = "none";
 
       document.querySelector("#course_name").innerHTML =
         `Course Name : ` + review.data().course_name;
@@ -172,7 +180,10 @@ function renderRoom(review, doc) {
       document.querySelector("#finalResult").innerHTML =
         `Your Score : ` + st.data().totalResult;
       document.querySelector("#answered").innerHTML =
-        `Your Answered : ` + st.data().totalAnswered + `/`+review.data().total_questions;
+        `Your Answered : ` +
+        st.data().totalAnswered +
+        `/` +
+        review.data().total_questions;
 
       const studentResult = await db
         .collection("examrooms")
@@ -199,43 +210,45 @@ function renderRoom(review, doc) {
     }
   });
 }
-
+/* function parseDate(input) {
+  var parts = input.match(/(\d+)/g);
+  // new Date(year, month [, date [, hours[, minutes[, seconds[, ms]]]]])
+  return new Date(parts[0], parts[1]-1, parts[2]); // months are 0-based
+} */
 renderResult = (resultID) => {
-  const t1 = "quote";
-  const t2 = "your_ans";
-  const t3 = "correct_ans";
+
 
   let render = document.createElement("div");
   let trow1 = document.createElement("tr");
-  let trow2 = document.createElement("tr");
+  // let trow2 = document.createElement("tr");
   let q = document.createElement("h1");
   let quote1 = document.createElement("p");
   let quote2 = document.createElement("p");
-  let p1 = document.createElement("p");
-  let p2 = document.createElement("p");
+  // let p1 = document.createElement("p");
+  // let p2 = document.createElement("p");
 
   render.setAttribute("class", "render_result");
   q.setAttribute("id", "question");
   quote1.setAttribute("class", "quote");
   quote2.setAttribute("class", "quote");
-  p1.setAttribute("id", "your_ans");
-  p2.setAttribute("id", "correct_ans");
+  // p1.setAttribute("id", "your_ans");
+  // p2.setAttribute("id", "correct_ans");
 
   q.textContent = resultID.data().question;
-  quote1.textContent = `Correct Answer : `;
-  quote2.textContent = `Your Answer : `;
-  p1.textContent = resultID.data().ans;
-  p2.textContent = resultID.data().student;
+  quote1.textContent = `Correct Answer : ${resultID.data().ans}`;
+  quote2.textContent = `Your Answer : ${resultID.data().student}`;
+  // p1.textContent = resultID.data().ans;
+  // p2.textContent = resultID.data().student;
 
-  trow2.appendChild(p1);
-  trow2.appendChild(p2);
+  // trow2.appendChild(p1);
+  // trow2.appendChild(p2);
 
   trow1.appendChild(quote1);
   trow1.appendChild(quote2);
 
   render.appendChild(q);
   render.appendChild(trow1);
-  render.appendChild(trow2);
+  // render.appendChild(trow2);
 
   renderDiv.appendChild(render);
   if (resultID.data().correct) {
@@ -287,18 +300,16 @@ next.addEventListener("click", (e) => {
   renderForm.reset();
   console.log(flag2);
   totalAnswered++;
-  if(!flag2)
-  {
+  if (!flag2) {
     db.collection("examrooms")
-    .doc(roomID.id)
-    .collection("students")
-    .doc(auth.currentUser.uid)
-    .set({
-      participated: 1,
-    });
-    
+      .doc(roomID.id)
+      .collection("students")
+      .doc(auth.currentUser.uid)
+      .set({
+        participated: 1,
+      });
 
-    flag2=1;
+    flag2 = 1;
   }
   console.log(totalAnswered);
 
