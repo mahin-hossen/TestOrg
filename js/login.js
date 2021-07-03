@@ -1,7 +1,10 @@
-//login
-
 const loginForm = document.querySelector("#login-form");
-
+const googleButton = document.querySelector("#loginWithGoogle");
+// let provider = new firebase.auth.GoogleAuthProvider();
+// provider.addScope("https://www.googleapis.com/auth/contacts.readonly");
+// firebase.auth().languageCode = "it";
+// To apply the default browser preference instead of explicitly setting it.
+// firebase.auth().useDeviceLanguage();
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -31,22 +34,69 @@ loginForm.addEventListener("submit", (e) => {
   );
 });
 
-// const loginWithGoogleButton = document.getElementById("loginWithGoogle");
+// googleButton.addEventListener("click", (e)=>
+// {
+//   firebase
+//   .auth()
+//   .signInWithPopup(provider)
+//   .then((result) => {
+//     console.log(result);
+//     // /** @type {firebase.auth.OAuthCredential} */
+//     // var credential = result.credential;
 
-// const loginWithGoogle = () => {
-//   const googleProvider = new firebaseConfig.auth.GoogleAuthProvider();
-//   auth
-//     .signInWithRedirect(googleProvider)
-//     .then((cred) => {
-//       window.location.assign("./Student/home_page");
-//     })
+//     // // This gives you a Google Access Token. You can use it to access the Google API.
+//     // var token = credential.accessToken;
+//     // // The signed-in user info.
+//     // var user = result.user;
+//     // ...
+//   })
+// });
+
+// function google() {
+ 
 //     .catch((error) => {
-//       console.error(error);
+//       // Handle Errors here.
+//       var errorCode = error.code;
+//       var errorMessage = error.message;
+//       // The email of the user's account used.
+//       var email = error.email;
+//       // The firebase.auth.AuthCredential type that was used.
+//       var credential = error.credential;
+//       // ...
 //     });
-// };
-// loginWithGoogleButton.addEventListener("click", loginWithGoogle);
 
-//listen for auth changes
+//   // auth.signInWithPopup(provider).then((res) => {
+
+//   // firebase.auth()
+//   // .getRedirectResult()
+//   // .then((result) => {
+//   //   if (result.credential) {
+//   //     /** @type {firebase.auth.OAuthCredential} */
+//   //     var credential = result.credential;
+
+//   //     // This gives you a Google Access Token. You can use it to access the Google API.
+//   //     var token = credential.accessToken;
+//   //     // ...
+//   //   }
+//   //   // The signed-in user info.
+//   //   var user = result.user;
+//   // }).catch((error) => {
+//   //   // Handle Errors here.
+//   //   var errorCode = error.code;
+//   //   var errorMessage = error.message;
+//   //   // The email of the user's account used.
+//   //   var email = error.email;
+//   //   // The firebase.auth.AuthCredential type that was used.
+//   //   var credential = error.credential;
+//   //   // ...
+//   // });
+//   //   console.log(res);
+//   // });
+// }
+// /* googleButton.addEventListener("click",(e)=>
+// {
+  
+// }) */
 
 auth.onAuthStateChanged((user) => {
   if (user) {

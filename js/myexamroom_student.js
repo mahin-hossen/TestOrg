@@ -170,43 +170,64 @@ function renderRoom(review, doc) {
       container.style.display = "none";
       message.style.display = "block";
     } else {
-      document.querySelector(".top_section").style.display = "block";
-      container.style.display = "none";
+      let endTime = getInGlobalFormat(
+        review.data().exam_date,
+        review.data().end_time
+      );
+      endTime = new Date(endTime).getTime() ;
+      const currentTime = getCurrentTime();
+      endTime+=60000;
 
-      document.querySelector("#course_name").innerHTML =
-        `Course Name : ` + review.data().course_name;
-      document.querySelector("#exam_date").innerHTML =
-        `Exam Date : ` + review.data().exam_date;
-      document.querySelector("#finalResult").innerHTML =
-        `Your Score : ` + st.data().totalResult;
-      document.querySelector("#answered").innerHTML =
-        `Your Answered : ` +
-        st.data().totalAnswered +
-        `/` +
-        review.data().total_questions;
+      console.log(endTime);
+      // console.log(endTime+60000);
+      console.log(currentTime);
 
-      const studentResult = await db
-        .collection("examrooms")
-        .doc(review.id)
-        .collection("students")
-        .doc(auth.currentUser.uid)
-        .collection("result")
-        .get();
+      if (currentTime <= endTime) {
+        document.querySelector(
+          "#message1"
+        ).innerHTML = `You have to wait till the exam is finished ...`;
+  
+        container.style.display = "none";
+        message.style.display = "block";
+      } else {
+        document.querySelector(".top_section").style.display = "block";
+        container.style.display = "none";
 
-      studentResult.docs.forEach(async (doc) => {
-        const detailedResult = await db
+        document.querySelector("#course_name").innerHTML =
+          `Course Name : ` + review.data().course_name;
+        document.querySelector("#exam_date").innerHTML =
+          `Exam Date : ` + review.data().exam_date;
+        document.querySelector("#finalResult").innerHTML =
+          `Your Score : ` + st.data().totalResult;
+        document.querySelector("#answered").innerHTML =
+          `Your Answered : ` +
+          st.data().totalAnswered +
+          `/` +
+          review.data().total_questions;
+
+        const studentResult = await db
           .collection("examrooms")
           .doc(review.id)
           .collection("students")
           .doc(auth.currentUser.uid)
           .collection("result")
-          .doc(doc.id)
           .get();
-        console.log(detailedResult);
-        console.log(detailedResult.data());
 
-        renderResult(detailedResult);
-      });
+        studentResult.docs.forEach(async (doc) => {
+          const detailedResult = await db
+            .collection("examrooms")
+            .doc(review.id)
+            .collection("students")
+            .doc(auth.currentUser.uid)
+            .collection("result")
+            .doc(doc.id)
+            .get();
+          console.log(detailedResult);
+          console.log(detailedResult.data());
+
+          renderResult(detailedResult);
+        });
+      }
     }
   });
 }
@@ -216,8 +237,6 @@ function renderRoom(review, doc) {
   return new Date(parts[0], parts[1]-1, parts[2]); // months are 0-based
 } */
 renderResult = (resultID) => {
-
-
   let render = document.createElement("div");
   let trow1 = document.createElement("tr");
   // let trow2 = document.createElement("tr");
