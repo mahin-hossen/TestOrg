@@ -96,7 +96,7 @@ table a {
   color: #000000;
 }
 table a:hover {
-  /* color: rgb(22, 85, 69); */
+  color: rgb(22, 85, 69);
   color: #0f0f09;
   background-color: azure;
 }
