@@ -48,9 +48,10 @@ signupForm.addEventListener("submit", (e) => {
         signupForm.reset();
         prevs.style.display = "none";
         msg.style.display = "block";
-        msg.innerHTML = "ok";
-        document.getElementById("button").onclick = location.href =
-          "../login.html";
+        msg.innerHTML =
+          "Verification link has been sent to your email. Please verify to login";
+        // document.getElementById("button").onclick = location.href =
+        //   "../login.html";
       });
   }
 
@@ -58,5 +59,3 @@ signupForm.addEventListener("submit", (e) => {
   //   if(teacher) console.log(`${teacher}`);
   //   else console.log(`${student}`);
 });
-msg.innerHTML =
-  "Verification link has been sent to your email. Please verify to login";

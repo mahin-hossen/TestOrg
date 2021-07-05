@@ -122,15 +122,20 @@ input {
   /* border: 1px solid black; */
   padding-bottom: 2rem;
 }
-#prevs
-{
+#prevs {
   /* display: none; */
 }
-#msg
-{
+#msg {
   text-align: center;
   font-size: 2rem;
   display: none;
+  margin-top: 7rem;
+  margin-bottom: 20rem;
+<<<<<<< HEAD
+=======
+  margin-top: 7rem;
+  margin-bottom: 20rem;
+>>>>>>> 4d02b9c0ac91f43929894297dbfa67904d87218a
 }
 /************* footer **************/
 
