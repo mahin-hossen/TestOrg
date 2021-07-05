@@ -46,10 +46,10 @@ li {
 }
 /****************** section*******************/
 .profile {
-  display: none; 
+  display: none;
 }
 
-.edit {  
+.edit {
   font-size: 1rem;
   border: none;
   outline: none;
@@ -66,8 +66,7 @@ li {
   color: #2db69f;
   box-shadow: 0 10px 36px rgba(63, 27, 131, 0.15);
 }
-#edit_button
-{
+#edit_button {
   text-align: center;
 }
 table {
@@ -79,10 +78,16 @@ table {
 }
 td {
   padding: 1rem 8rem;
+  /* min-width: 30vw; */
+  max-width: 45vw;
+  min-width: 45vw;
+  /* border: 1px solid black; */
 }
 
-#show_birthday, #show_university, #show_department, #show_cgpa
-{
+#show_birthday,
+#show_university,
+#show_department,
+#show_cgpa {
   display: none;
 }
 input {
@@ -91,13 +96,11 @@ input {
   padding: 12px;
   border-radius: 0.5rem;
 }
-#add
-{
+#add {
   display: none;
 }
-#save
-{
-  text-align: center; 
+#save {
+  text-align: center;
 }
 /**************************button***************************/
 .button {
