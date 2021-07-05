@@ -122,7 +122,15 @@ input {
   /* border: 1px solid black; */
   padding-bottom: 2rem;
 }
-
+#prevs
+{
+  /* display: none; */
+}
+#msg
+{
+  text-align: center;
+  font-size: 2rem;
+}
 /************* footer **************/
 
 footer {
