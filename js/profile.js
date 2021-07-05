@@ -51,7 +51,7 @@ setProfile = async () => {
   }
   if (currUser.data().semester) {
     showSemester.style.display = "block";
-    dsemester.textContent = currUser.data().semester;
+    semester.textContent = currUser.data().semester;
   }
   if (currUser.data().cgpa) {
     showCgpa.style.display = "block";
