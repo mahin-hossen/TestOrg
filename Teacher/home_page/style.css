@@ -29,7 +29,7 @@ header {
 
   /* background-color: #2b6659; */
   color: rgb(255, 255, 255);
-  padding: 1rem;
+  padding: 1rem 0rem 1rem 1rem;
 }
 
 li {
@@ -37,13 +37,21 @@ li {
   /* float: left;   */
   font-size: 2rem;
   display: inline-block;
-  margin-inline: 3rem;
+  margin-inline: 2rem;
 }
 #home {
   font-size: 4rem;
   color: rgb(25, 136, 108);
 }
-
+#userID {
+  color: rgb(0, 0, 0);
+  background-color: rgb(122, 255, 188);
+  padding: 0.7rem;
+  border-radius: 0.2rem;
+}
+#userID:hover {
+  background-color: rgb(255, 255, 255);
+}
 /*************************article**********************/
 
 #first_row {
