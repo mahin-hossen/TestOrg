@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  /* font-size: 62.5%; */
+  /* background-image: url(/Teacher/create_examroom/bg3.jpg); */
+  /* background-color: rgb(34, 37, 49); */
+  background-color: rgb(181, 228, 185);
+}
+main {
+  /* background-image: url(/Teacher/home_page/bg1.jpg); */
+  /* background-image: url(/Student/home_page/pexels-johannes-plenio-2080960.jpg); */
+  background-size: cover;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: rgb(238, 118, 88);
+  cursor: pointer;
+  box-shadow: rgb(19, 9, 29);
+}
+
+/******************* header ******************/
+header {
+  /* border: 2px solid blue; */
+
+  /* background-color: #2b6659; */
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+}
+
+li {
+  list-style: none;
+  /* float: left;   */
+  font-size: 2rem;
+  display: inline-block;
+  margin-inline: 3rem;
+}
+#home {
+  font-size: 4rem;
+  color: rgb(25, 136, 108);
+}
+/****************** section*******************/
+.profile {
+  display: none; 
+}
+
+.edit {  
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  margin-top: 1rem;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-family: monospace;
+}
+.edit:hover {
+  cursor: pointer;
+  color: #2db69f;
+  box-shadow: 0 10px 36px rgba(63, 27, 131, 0.15);
+}
+#edit_button
+{
+  text-align: center;
+}
+table {
+  font-size: 2rem;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  color: #000000;
+}
+td {
+  padding: 1rem 8rem;
+}
+
+#show_birthday, #show_university, #show_department, #show_cgpa
+{
+  display: none;
+}
+input {
+  text-align: center;
+  border: 2px solid green;
+  padding: 12px;
+  border-radius: 0.5rem;
+}
+#add
+{
+  display: none;
+}
+#save
+{
+  text-align: center; 
+}
+/**************************button***************************/
+.button {
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  margin-top: 1rem;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-family: monospace;
+}
+.button:hover {
+  cursor: pointer;
+  color: #2db69f;
+  box-shadow: 0 10px 36px rgba(63, 27, 131, 0.15);
+}
