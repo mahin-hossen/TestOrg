@@ -1,6 +1,7 @@
 const name = document.querySelector("#name");
 const university = document.querySelector("#university");
 const department = document.querySelector("#department");
+const semester = document.querySelector("#semester");
 const email = document.querySelector("#email");
 const birthday = document.querySelector("#birthday");
 const cgpa = document.querySelector("#cgpa");
@@ -12,6 +13,7 @@ const save = document.querySelector("#save_button");
 
 const showUniversity = document.querySelector("#show_university");
 const showDepartment = document.querySelector("#show_department");
+const showSemester = document.querySelector("#show_semester");
 const showBirthday = document.querySelector("#show_birthday");
 const showCgpa = document.querySelector("#show_cgpa");
 
@@ -47,6 +49,10 @@ setProfile = async () => {
     showDepartment.style.display = "block";
     department.textContent = currUser.data().department;
   }
+  if (currUser.data().semester) {
+    showSemester.style.display = "block";
+    dsemester.textContent = currUser.data().semester;
+  }
   if (currUser.data().cgpa) {
     showCgpa.style.display = "block";
     cgpa.textContent = currUser.data().cgpa;
@@ -66,6 +72,8 @@ edit.addEventListener("click", (e) => {
     addForm["university"].value = currUser.data().university;
   if (currUser.data().department)
     addForm["department"].value = currUser.data().department;
+  if (currUser.data().semester)
+    addForm["semester"].value = currUser.data().semester;
   if (currUser.data().cgpa) addForm["cgpa"].value = currUser.data().cgpa;
   if (currUser.data().birthday)
     addForm["birthday"].value = currUser.data().birthday;
@@ -76,6 +84,7 @@ save.addEventListener("click", async (e) => {
   const username = addForm["username"].value;
   const university = addForm["university"].value;
   const department = addForm["department"].value;
+  const semester = addForm["semester"].value;
   const cgpa = addForm["cgpa"].value;
   const birthday = addForm["birthday"].value;
 
@@ -84,6 +93,7 @@ save.addEventListener("click", async (e) => {
       username: username,
       university: university,
       department: department,
+      semester: semester,
       cgpa: cgpa,
       birthday: birthday,
     },

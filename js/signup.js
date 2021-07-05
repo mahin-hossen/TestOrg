@@ -40,13 +40,13 @@ signupForm.addEventListener("submit", (e) => {
           });
         }
       })
+
       .then(() => {
         signupForm.reset();
         document.getElementById("button").onclick = location.href =
           "../login.html";
       });
   }
-
   //   console.log(`${email}  ${username}  ${password1}  ${password2} `);
   //   if(teacher) console.log(`${teacher}`);
   //   else console.log(`${student}`);

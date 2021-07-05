@@ -7,7 +7,7 @@ html {
   /* font-size: 62.5%; */
   /* background-image: url(/Teacher/create_examroom/bg3.jpg); */
   /* background-color: rgb(34, 37, 49); */
-  background-color: rgb(181, 228, 185);
+  background-color: rgb(34, 37, 49);
 }
 main {
   /* background-image: url(/Teacher/home_page/bg1.jpg); */
@@ -50,20 +50,20 @@ li {
 }
 
 .edit {
-  font-size: 1rem;
+  font-size: 1.5rem;
   border: none;
   outline: none;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   background-color: #ffffff;
   color: #000000;
-  padding: 0.75rem 1rem;
+  padding: 1rem 1rem;
   border-radius: 0.5rem;
   font-weight: bold;
   font-family: monospace;
 }
 .edit:hover {
   cursor: pointer;
-  color: #2db69f;
+  background-color: #01ffd5;
   box-shadow: 0 10px 36px rgba(63, 27, 131, 0.15);
 }
 #edit_button {
@@ -75,26 +75,35 @@ table {
   /* justify-content: center; */
   align-items: center;
   color: #000000;
+  margin-top: 7rem;
+  margin-bottom: 5rem;
+  margin-left: 10rem;
+  border-spacing: 15px 5px;
 }
 td {
-  padding: 1rem 8rem;
+  padding: 1rem 5rem;
   /* min-width: 30vw; */
-  max-width: 45vw;
-  min-width: 45vw;
+  /* max-width: 45vw; */
+  min-width: 40vw;
   /* border: 1px solid black; */
+  background-color: rgb(54, 187, 154);
+  border-radius: 0.5rem;
 }
 
 #show_birthday,
 #show_university,
 #show_department,
-#show_cgpa {
+#show_cgpa,
+#show_semester {
   display: none;
 }
 input {
   text-align: center;
-  border: 2px solid green;
+  border: 2px solid rgb(122, 122, 122);
   padding: 12px;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
+  background: rgb(54, 187, 154);
+  /* border: none; */
 }
 #add {
   display: none;
@@ -117,6 +126,6 @@ input {
 }
 .button:hover {
   cursor: pointer;
-  color: #2db69f;
+  background-color: #00ffd5;
   box-shadow: 0 10px 36px rgba(63, 27, 131, 0.15);
 }
