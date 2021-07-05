@@ -21,42 +21,36 @@ signupForm.addEventListener("submit", (e) => {
   } else {
     auth
       .createUserWithEmailAndPassword(email, password1)
-      .then((cred) => {
-        auth.currentUser.sendEmailVerification().then(() => {
-          console.log("done");
-          // Email verification sent!
-          // ...
-          if (person[1].checked) {
-            return db.collection("usersinfo").doc(cred.user.uid).set({
-              username: username,
-              email: email,
-              // university: university,
-              // birthday: birthday,
-              user_type: "student",
-              totalrooms: 0,
-            });
-          } else if (person[0].checked) {
-            return db.collection("usersinfo").doc(cred.user.uid).set({
-              username: username,
-              email: email,
-              user_type: "teacher",
-              // university: university,
-              // birthday: birthday,
-              totalrooms: 0,
-            });
-          }
-        });
+      .then(async (cred) => {
+        await auth.currentUser.sendEmailVerification();
+        if (person[1].checked) {
+          return db.collection("usersinfo").doc(cred.user.uid).set({
+            username: username,
+            email: email,
+            // university: university,
+            // birthday: birthday,
+            user_type: "student",
+            totalrooms: 0,
+          });
+        } else if (person[0].checked) {
+          return db.collection("usersinfo").doc(cred.user.uid).set({
+            username: username,
+            email: email,
+            user_type: "teacher",
+            // university: university,
+            // birthday: birthday,
+            totalrooms: 0,
+          });
+        }
       })
 
       .then(() => {
         signupForm.reset();
         prevs.style.display = "none";
         msg.style.display = "block";
-
-        msg.innerHTML =
-          "Verification link has been sent to your email. Please verify to login";
-        // document.getElementById("button").onclick = location.href =
-        //   "../login.html";
+        msg.innerHTML = "ok";
+        document.getElementById("button").onclick = location.href =
+          "../login.html";
       });
   }
 
@@ -64,3 +58,5 @@ signupForm.addEventListener("submit", (e) => {
   //   if(teacher) console.log(`${teacher}`);
   //   else console.log(`${student}`);
 });
+msg.innerHTML =
+  "Verification link has been sent to your email. Please verify to login";
