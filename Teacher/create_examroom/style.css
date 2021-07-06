@@ -269,10 +269,5 @@ ul li div {
 }
 #lost_msg {
   margin-bottom: 3rem;
+  color: #ffffff;
 }
-#lost_button:hover
-{
-  color: aliceblue;
-  background-color:ghostwhite;
-}
-
