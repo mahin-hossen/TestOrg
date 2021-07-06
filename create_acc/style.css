@@ -127,16 +127,10 @@ input {
 }
 #msg {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   display: none;
-  margin-top: 7rem;
-  margin-bottom: 20rem;
-}
-#msg2
-{
-  display: none;
-  text-align:center;
-  color: brown;
+  margin-top: 10rem;
+  margin-bottom: 16.5rem;
 }
 /************* footer **************/
 
@@ -167,8 +161,7 @@ footer p {
 #lost_msg {
   margin-bottom: 3rem;
 }
-#lost_button:hover
-{
+#lost_button:hover {
   color: aliceblue;
-  background-color:ghostwhite;
+  background-color: ghostwhite;
 }
