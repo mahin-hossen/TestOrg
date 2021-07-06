@@ -9,7 +9,7 @@
     <title>TestOrg</title>
   </head>
   <body>
-    <main>
+    <main id="all">
       <header class="login_nav">
         <li id="home"><a href="/Teacher/home_page/index.html">Testorg </a></li>
         <li><a href="/profile/index.html">Profile </a></li>
@@ -46,7 +46,11 @@
         </p>
       </div>
     </main>
-
+    <section id="lost">
+      <p id="lost_msg">Oops !!! Are You Lost ?</p>
+      <a class="button" id="lost_button" href="/login.html" style="color: chartreuse;">Go to Home Page</a>
+      <!-- <button>Go to Home Page</button> -->
+    </section>
     <!-- ---------------js------------ -->
 
     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
@@ -59,5 +63,6 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="/script.js"></script>
     <script src="/js/teacher.js"></script>
+    <script src="/js/verify_teacher.js"></script>
   </body>
 </html>

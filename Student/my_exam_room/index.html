@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../my_exam_room/style.css" />
   </head>
   <body>
-    <main>
+    <main id="all">
       <header class="login_nav">
         <li id="home"><a href="/Student/home_page/index.html">Testorg </a></li>
         <li><a href="/profile/index.html">Profile </a></li>
@@ -188,5 +188,28 @@
       <script src="https://unpkg.com/scrollreveal"></script>
       <script src="/script.js"></script>
     </main>
+    <section id="lost">
+      <p id="lost_msg">Oops !!! Are You Lost ?</p>
+      <a
+        class="button"
+        id="lost_button"
+        href="/login.html"
+        style="color: chartreuse"
+        >Go to Home Page</a
+      >
+      <!-- <button>Go to Home Page</button> -->
+    </section>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+
+    <script src="/js/firebase_main.js"></script>
+    <script src="/js/signout.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/script.js"></script>
+    <script src="/js/student.js"></script>
+    <script src="/js/verify_student.js"></script>
   </body>
+  
 </html>
