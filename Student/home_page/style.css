@@ -135,9 +135,5 @@ td div {
 }
 #lost_msg {
   margin-bottom: 3rem;
-}
-#lost_button:hover
-{
-  color: aliceblue;
-  background-color:ghostwhite;
+  color: #f2f3f4;
 }

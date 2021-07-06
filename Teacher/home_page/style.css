@@ -132,12 +132,9 @@ td div {
   /* border: 1px solid black; */
   margin-top: 10rem;
   display: none;
+  color: #f2f3f4;
 }
 #lost_msg {
   margin-bottom: 3rem;
-}
-#lost_button:hover
-{
-  color: aliceblue;
-  background-color:ghostwhite;
+  color: #f2f3f4;
 }
