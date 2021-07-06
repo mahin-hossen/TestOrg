@@ -129,21 +129,15 @@ aside {
   color: rgb(243, 96, 108) k;
 }
 
-/***********************login With google*************/
-/* #loginWithGoogle
+/***********************last_part*************/
+#last_part
 {
-  display: block;
-  margin: 0 auto;
-  margin-top: 1rem;
-  background-color:lightseagreen;
-  /* hello; */
-
-/* #loginWithGoogle:hover
+  display: none;
+}
+#verification
 {
-  box-shadow: 0 10px 36px rgba(63, 27, 131, 0.15);
-  background-color: rgb(20, 238, 155);
-}  */
-
+  font-size: 1rem;
+}
 /************* footer **************/
 
 footer {

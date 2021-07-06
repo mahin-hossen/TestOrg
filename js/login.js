@@ -1,5 +1,7 @@
 const loginForm = document.querySelector("#login-form");
-const googleButton = document.querySelector("#loginWithGoogle");
+// const googleButton = document.querySelector("#loginWithGoogle");
+const verification = document.querySelector("#verification");
+
 // let provider = new firebase.auth.GoogleAuthProvider();
 // provider.addScope("https://www.googleapis.com/auth/contacts.readonly");
 // firebase.auth().languageCode = "it";
@@ -19,12 +21,20 @@ loginForm.addEventListener("submit", (e) => {
         .get()
         .then((doc) => {
           loginForm.reset();
-          if (doc.data().user_type == "student") {
+          if (cred.user.emailVerified) {
+             if (doc.data().user_type == "student") {
             document.getElementById("button").onclick = location.href =
               "/Student/home_page/index.html";
           } else {
             document.getElementById("button").onclick = location.href =
               "/Teacher/home_page/index.html";
+          }
+          }
+          else if(!cred.user.emailVerified)
+          {
+            window.last_email = email;
+            document.querySelector("#last_part").style.display= "block";
+            document.querySelector("#msg").innerHTML = `You need to verify Your email first`
           }
         });
     },
@@ -34,6 +44,11 @@ loginForm.addEventListener("submit", (e) => {
   );
 });
 
+verification.addEventListener("click",(e)=>
+{
+  e.preventDefault();
+  auth.currentUser.sendEmailVerification();
+})
 // googleButton.addEventListener("click", (e)=>
 // {
 //   firebase
@@ -53,7 +68,7 @@ loginForm.addEventListener("submit", (e) => {
 // });
 
 // function google() {
- 
+
 //     .catch((error) => {
 //       // Handle Errors here.
 //       var errorCode = error.code;
@@ -95,7 +110,7 @@ loginForm.addEventListener("submit", (e) => {
 // }
 // /* googleButton.addEventListener("click",(e)=>
 // {
-  
+
 // }) */
 
 auth.onAuthStateChanged((user) => {
