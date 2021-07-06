@@ -19,9 +19,19 @@ const showCgpa = document.querySelector("#show_cgpa");
 const lost = document.querySelector("#lost");
 const all = document.querySelector("#all");
 auth.onAuthStateChanged((user) => {
-  if (user.emailVerified) {
+
+  if (user) {
+    if(user.emailVerified)
+    {
+      setProfile();
+    }
+    else
+    {
+      all.style.display = "none";
+      lost.style.display = "block";
+    }
     // const currUser = db.collection("usersinfo").doc(auth.currentUser.uid);
-    setProfile();
+    
   } else {
     all.style.display="none";
     lost.style.display = "block";

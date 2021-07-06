@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Student/profile/style.css" />
+    <title>Profile</title>
+  </head>
+  <body>
+    <main id="all">
+      <header class="login_nav">
+        <li id="home"><a href="/Student/home_page/index.html">Testorg </a></li>
+        <li><a href="/Student/profile/index.html">Profile </a></li>
+        <li><a href="/Student/find_room/index.html">Find Examroom</a></li>
+        <li><a href="/Student/my_exam_room/index.html">My Examroom</a></li>
+        <li><a id="signout">SignOut</a></li>
+      </header>
+      <section class="profile">
+        <table class="table">
+          <tr>
+            <td><label for="username">Username / Metric ID</label></td>
+            <td id="name"></td>
+          </tr>
+          <tr id="show_birthday">
+            <td><label for="birthday">Date of Birth</label></td>
+            <td id="birthday"></td>
+          </tr>
+          <tr id="show_university">
+            <td><label for="university">University</label></td>
+            <td id="university"></td>
+          </tr>
+          <tr id="show_department">
+            <td><label for="department">Department</label></td>
+            <td id="department"></td>
+          </tr>
+          <tr id="show_semester">
+            <td><label for="semester">Semester</label></td>
+            <td id="semester"></td>
+          </tr>
+          <tr id="show_cgpa">
+            <td><label for="cgpa">CGPA</label></td>
+            <td id="cgpa"></td>
+          </tr>
+          <tr>
+            <td><label for="email">Email</label></td>
+            <td id="email"></td>
+          </tr>
+          <!-- <tr>
+            <td><label for="password1">Password</label></td>
+            <td></td>
+          </tr>-->
+        </table>
+        <div id="edit_button">
+          <button class="edit">Edit Your Profile</button>
+        </div>
+      </section>
+      <section id="add">
+        <form action="" id="addForm">
+          <table class="table">
+            <tr>
+              <td><label for="username">Your Username / Metric ID</label></td>
+              <td>
+                <input type="text" name="username" id="username" value="" />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="university">University Name</label></td>
+              <td>
+                <input type="text" name="university" id="university" />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="department">Department</label></td>
+              <td>
+                <input type="text" name="department" id="department" />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="semester">Semester</label></td>
+              <td>
+                <input type="text" name="semester" id="semester" placeholder="for student" />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="cgpa">CGPA</label></td>
+              <td>
+                <input type="text" name="cgpa" id="cgpa" placeholder="for student"/>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="birthday">Date of Birth</label></td>
+              <td>
+                <input type="date" name="birthday" id="birthday" />
+              </td>
+            </tr>
+          </table>
+          <div id="save">
+            <button type="submit" class="button" id="save_button">Save</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <section id="lost">
+      <p id="lost_msg">Oops !!! Are You Lost ?</p>
+      <a class="button" id="lost_button" href="/login.html" style="color: chartreuse;">Go to Home Page</a>
+      <!-- <button>Go to Home Page</button> -->
+    </section>
+
+    <!-- ---------------js------------ -->
+
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+
+    <script src="/js/firebase_main.js"></script>
+    <script src="/js/signout.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/script.js"></script>
+    <script src="/js/profile.js"></script>
+  </body>
+</html>
