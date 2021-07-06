@@ -2,6 +2,7 @@
 const signupForm = document.querySelector("#signup-form");
 const password_mismatch = document.querySelector(".password_mismatch");
 const msg = document.querySelector("#msg");
+const msg2 = document.querySelector("#msg2");
 const prevs = document.querySelector("#prevs");
 
 signupForm.addEventListener("submit", (e) => {
@@ -43,6 +44,7 @@ signupForm.addEventListener("submit", (e) => {
           });
         }
       })
+      
 
       .then(() => {
         signupForm.reset();
@@ -52,7 +54,17 @@ signupForm.addEventListener("submit", (e) => {
           "Verification link has been sent to your email. Please verify to login";
         // document.getElementById("button").onclick = location.href =
         //   "../login.html";
+      })
+      .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log(errorCode);
+        console.log(errorMessage);
+        msg2.style.display = "block";
+        msg2.innerHTML = errorMessage;
+            
       });
+      
   }
 
   //   console.log(`${email}  ${username}  ${password1}  ${password2} `);

@@ -16,12 +16,16 @@ const showDepartment = document.querySelector("#show_department");
 const showSemester = document.querySelector("#show_semester");
 const showBirthday = document.querySelector("#show_birthday");
 const showCgpa = document.querySelector("#show_cgpa");
-
+const lost = document.querySelector("#lost");
+const all = document.querySelector("#all");
 auth.onAuthStateChanged((user) => {
-  if (user) {
+  if (user.emailVerified) {
     // const currUser = db.collection("usersinfo").doc(auth.currentUser.uid);
     setProfile();
   } else {
+    all.style.display="none";
+    lost.style.display = "block";
+    console.log("dont access");
     console.log(`hello`);
   }
 });
