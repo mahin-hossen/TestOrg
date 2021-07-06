@@ -43,3 +43,20 @@
   #home {
     font-size: 5rem;
   }
+  
+/*****************************lost**********************/
+#lost {
+  font-size: 3rem;
+  text-align: center;
+  /* border: 1px solid black; */
+  margin-top: 10rem;
+  display: none;
+}
+#lost_msg {
+  margin-bottom: 3rem;
+}
+#lost_button:hover
+{
+  color: aliceblue;
+  background-color:ghostwhite;
+}
