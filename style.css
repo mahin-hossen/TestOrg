@@ -130,13 +130,20 @@ aside {
 }
 
 /***********************last_part*************/
-#last_part
-{
+#last_part {
   display: none;
+  margin-top: 4rem;
+  font-size: 2.5rem;
+  color: rgb(219, 133, 107);
 }
-#verification
-{
-  font-size: 1rem;
+#verification {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: rgb(27, 143, 79);
+  background-color: rgb(255, 255, 255);
+}
+#verification:hover {
+  color: rgb(0, 0, 0);
 }
 /************* footer **************/
 
