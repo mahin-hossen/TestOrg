@@ -32,7 +32,8 @@ li {
 /******************* body ******************/
 .top {
   width: 100%;
-  background-image: url(/Why_Us/top_background.jpg);
+  /* background-image: url(../Why_Us/top_background.jpg); */
+  background-image: url(../Why_Us/top_background.jpg);
   padding-top: 13.8rem;
 }
 aside h1 {
@@ -68,9 +69,9 @@ aside {
   margin-left: 10rem;
 }
 .bottom {
-  background-image: url(/Why_Us/bottom_background.jpg);
-  /* width: 100%; */
-  padding: 30rem 0rem;
+  background-image: url(../Why_Us/bottom_background.jpg);
+  width: 100%;
+  padding: 5rem 0rem;
   font-family: Georgia, "Times New Roman", Times, serif;
   background-position: bottom;
 }

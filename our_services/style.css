@@ -133,15 +133,15 @@ article {
 }
 
 .first {
-  background-image: url(/our_services/2.jpg);
+  background-image: url(../our_services/2.jpg);
   background-size: cover;
 }
 .sec {
-  background-image: url(/our_services/3.jpg);
+  background-image: url(../our_services/3.jpg);
   background-size: cover;
 }
 .third {
-  background-image: url(/our_services/4.jpg);
+  background-image: url(../our_services/4.jpg);
   background-size: cover;
 }
 

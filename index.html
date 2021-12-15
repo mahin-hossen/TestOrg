@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="/login-icon-3039.gif" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./login-icon-3039.gif" />
     <title>Login</title>
   </head>
   <body>
@@ -39,13 +39,15 @@
               required
             />
           </div>
-           
+
           <button class="button">Login</button>
         </form>
         <div id="last_part">
           <p id="msg"></p>
-          <button class="button" id="verification">Resend Verification link</button>
-        </div> 
+          <button class="button" id="verification">
+            Resend Verification link
+          </button>
+        </div>
         <!-- <button id="loginWithGoogle" class="button">Login with Google</button> -->
         <aside>
           <p class="p1" class="login_input">Don't have an Account?</p>
@@ -55,15 +57,13 @@
           <div>
             <p class="login_error">
               Passwords doesn't match. Please
-              <a id="login_error" href="/index.html">try again</a>
+              <a id="login_error" href="./">try again</a>
             </p>
           </div>
-          
         </aside>
       </section>
-      
     </main>
-    
+
     <footer>
       <p>TestOrg</p>
       <p>&copy 2021 copyright all right reserved</p>
@@ -76,9 +76,9 @@
     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
 
-    <script src="/js/firebase_main.js"></script>
-    <script src="/js/login.js"></script>
+    <script src="./js/firebase_main.js"></script>
+    <script src="./js/login.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
