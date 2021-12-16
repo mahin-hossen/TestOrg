@@ -27,7 +27,7 @@ auth.onAuthStateChanged((user) => {
 // import { doc, getDoc } from "firebase/firestore";
 goBack.addEventListener("click", (e) => {
   e.preventDefault();
-  goBack.onclick = location.href = "../my_exam_room/index.html";
+  goBack.onclick = location.href = "../Teacher/my_exam_room/index.html";
 });
 function renderRoom(room) {
   ///review==roomID from examroom

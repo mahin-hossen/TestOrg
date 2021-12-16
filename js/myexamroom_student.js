@@ -279,17 +279,17 @@ renderResult = (resultID) => {
 goBack.addEventListener("click", (e) => {
   e.preventDefault();
   console.log("pressed");
-  goBack.onclick = location.href = "../my_exam_room/index.html";
+  goBack.onclick = location.href = "../Student/my_exam_room/index.html";
 });
 goBackTwo.addEventListener("click", (e) => {
   e.preventDefault();
   console.log("pressed");
-  goBackTwo.onclick = location.href = "../my_exam_room/index.html";
+  goBackTwo.onclick = location.href = "../Student/my_exam_room/index.html";
 });
 goBackThree.addEventListener("click", (e) => {
   e.preventDefault();
   console.log("pressed");
-  goBackThree.onclick = location.href = "../my_exam_room/index.html";
+  goBackThree.onclick = location.href = "../Student/my_exam_room/index.html";
 });
 waitingFunction = (startTime, currentTime, endTime, review) => {
   waitingPart.style.display = "block";

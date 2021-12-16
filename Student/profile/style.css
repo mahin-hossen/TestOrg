@@ -141,8 +141,7 @@ input {
 #lost_msg {
   margin-bottom: 3rem;
 }
-#lost_button:hover
-{
+#lost_button:hover {
   color: aliceblue;
-  background-color:ghostwhite;
+  background-color: ghostwhite;
 }

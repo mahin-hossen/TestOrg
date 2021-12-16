@@ -19,21 +19,16 @@ const showCgpa = document.querySelector("#show_cgpa");
 const lost = document.querySelector("#lost");
 const all = document.querySelector("#all");
 auth.onAuthStateChanged((user) => {
-
   if (user) {
-    if(user.emailVerified)
-    {
+    if (user.emailVerified) {
       setProfile();
-    }
-    else
-    {
+    } else {
       all.style.display = "none";
       lost.style.display = "block";
     }
     // const currUser = db.collection("usersinfo").doc(auth.currentUser.uid);
-    
   } else {
-    all.style.display="none";
+    all.style.display = "none";
     lost.style.display = "block";
     console.log("dont access");
     console.log(`hello`);
@@ -115,5 +110,5 @@ save.addEventListener("click", async (e) => {
       merge: true,
     }
   );
-  save.onclick = location.href = "../profile/index.html";
+  save.onclick = location.href = "../Student/profile/index.html";
 });

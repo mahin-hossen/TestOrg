@@ -3,7 +3,7 @@ const signout = document.querySelector("#signout");
 signout.addEventListener("click", (e) => {
   e.preventDefault();
   auth.signOut();
-  location.href = "../../index.html";
+  location.href = "../index.html";
 });
 
 //listen for auth changes

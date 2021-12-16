@@ -19,10 +19,10 @@ loginForm.addEventListener("submit", (e) => {
           if (cred.user.emailVerified) {
             if (doc.data().user_type == "student") {
               document.getElementById("button").onclick = location.href =
-                "/Student/home_page/index.html";
+                "../Student/home_page/index.html";
             } else {
               document.getElementById("button").onclick = location.href =
-                "/Teacher/home_page/index.html";
+                "./Teacher/home_page/index.html";
             }
           } else if (!cred.user.emailVerified) {
             window.last_email = email;

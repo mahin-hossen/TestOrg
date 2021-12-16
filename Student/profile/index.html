@@ -4,16 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/Student/profile/style.css" />
+    <link rel="stylesheet" href="../profile/style.css" />
     <title>Profile</title>
   </head>
   <body>
     <main id="all">
       <header class="login_nav">
-        <li id="home"><a href="/Student/home_page/index.html">Testorg </a></li>
-        <li><a href="/Student/profile/index.html">Profile </a></li>
-        <li><a href="/Student/find_room/index.html">Find Examroom</a></li>
-        <li><a href="/Student/my_exam_room/index.html">My Examroom</a></li>
+        <li id="home"><a href="../home_page/index.html">Testorg </a></li>
+        <!-- <li id="home"><a href="./Student/home_page/index.html">Testorg </a></li> -->
+        <li><a href="../profile/index.html">Profile </a></li>
+        <!-- <li><a href="../Student/profile/index.html">Profile </a></li> -->
+        <li><a href="../find_room/index.html">Find Examroom</a></li>
+        <li><a href="../my_exam_room/index.html">My Examroom</a></li>
         <li><a id="signout">SignOut</a></li>
       </header>
       <section class="profile">
@@ -116,7 +118,7 @@
       <a
         class="button"
         id="lost_button"
-        href="/index.html"
+        href="../../index.html"
         style="color: rgb(45, 163, 153)"
         >Go to Home Page</a
       >
@@ -130,10 +132,10 @@
     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
 
-    <script src="/js/firebase_main.js"></script>
-    <script src="/js/signout.js"></script>
+    <script src="../../js/firebase_main.js"></script>
+    <script src="../../js/signout.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="/script.js"></script>
-    <script src="/js/profile.js"></script>
+    <script src="../../script.js"></script>
+    <script src="../../js/profile.js"></script>
   </body>
 </html>
